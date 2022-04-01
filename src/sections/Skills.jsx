@@ -37,12 +37,11 @@ export const Skills = () => {
 const Container = styled.section`
 	.grid {
 		grid-template-columns: 1fr 1fr;
-		@media screen and (max-width: ${variables.mediaQueries.tablet}) {
+		@media screen and (max-width: ${variables.mediaQueries.laptop}) {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto auto;
 		}
 		.box {
-			border: blue solid 1px;
 			min-height: 50vh;
 			height: 50vh;
 		}
