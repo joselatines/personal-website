@@ -3,35 +3,40 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { variables } from './GlobalStyles';
-import { Button } from './Buttton';
+import { Button } from './Button';
 
 export const Navigation = () => {
 	const [showNav, setShowNav] = useState(false);
 
 	const list = ['Portfolio', 'Skills', 'Services', 'Clients', 'About Me'];
 
+	const variants = {
+		visible: {
+			opacity: 1,
+			height: showNav ? '350px' : '65px',
+			transition: { duration: 0.5 },
+		},
+	};
+
 	return (
 		<Container
 			// Styled components props only receives strings
 			show={showNav.toString()}
-			transition={{
-				duration: 0.5,
-			}}
-			animate={{
-				height: showNav ? '350px' : '60px',
-				backgroundColor: showNav ? variables.colors.bg_default : 'red',
-			}}
-			initial={{ height: '60px', backgroundColor: 'green' }}
+			variants={variants}
+			initial='hidden'
+			animate='visible'
 		>
 			<Logo className='Logo'>Jose Latines</Logo>
 			<LinksContainer className='LinksContainer'>
 				<Ul className='Ul'>
 					{list.map(el => (
-						<Li key={el} className='active'>{el}</Li>
+						<Li key={el}>{el}</Li>
 					))}
 				</Ul>
-				<Button content='Contact' />
 			</LinksContainer>
+			<div className='Right'>
+				<Button content='Contact' />
+			</div>
 			<Hamburger
 				onClick={() => setShowNav(prevState => !prevState)}
 				className='Hamburger'
@@ -45,58 +50,74 @@ export const Navigation = () => {
 };
 
 const Container = styled(motion.nav)`
-	display: ${props => (props.hide === 'true' ? 'none' : 'flex')};
+	display: ${props => (props.hide === 'true' ? 'none' : 'grid')};
+	justify-content: center;
 	align-items: center;
-	justify-content: space-between;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'Logo Links Right';
+	gap: 1rem;
+
+	position: fixed;
+	top: 15px;
+	left: 50%;
+	z-index: 100;
+	transform: translateX(-50%);
+	width: 90%;
+
 	padding: 1rem 1.5rem;
 	font-size: 1rem;
 	font-family: ${variables.font.titles};
 	font-weight: ${variables.font.semiBold};
 	border-radius: 30px;
-	/* 	background-color: rgba(255, 23, 23, 0.241); */
-	position: fixed;
-	top: 15px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100%;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
-		align-items: flex-start;
-		/* background-color: ${variables.colors.bg_default}; */
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			'Logo . Right'
+			'Links Links Links';
 		overflow: hidden;
 		.Hamburger {
 			@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
 				display: block;
 			}
 		}
-		.LinksContainer {
-			flex-direction: column;
-		}
+		.LinksContainer,
 		.Ul {
 			flex-direction: column;
-			margin-top: 50px;
 			width: 100%;
+			margin-top: 3px;
 		}
 	}
+	.Right {
+		grid-area: Right;
+	}
 `;
-const Logo = styled.h1`
-	font-size: 1.3rem;
+const Logo = styled.h2`
+	font-size: clamp(.8rem, 2.5vw, 3rem);
+	grid-area: Logo;
 `;
-const LinksContainer = styled.div`
+const LinksContainer = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 1.5rem;
+	grid-area: Links;
 `;
 
-const Ul = styled.div`
+const Ul = styled.ul`
 	list-style-type: none;
 	display: flex;
 	gap: 1.5rem;
 `;
-const Li = styled.div`
+const Li = styled.li`
 	color: ${variables.colors.gray};
+	cursor: pointer;
+	transition: ${variables.transitions.short};
 	&:hover {
-		opacity: 1;
+		color: ${variables.colors.font_default};
 	}
 	&.active {
 		border-bottom: solid 1px ${variables.colors.primary};
