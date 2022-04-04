@@ -36,12 +36,13 @@ export const CardProject = ({ title, img, preview, code, description }) => {
 };
 
 const Container = styled.article`
-	width: 16rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
+	width: 16rem;
+	
 	.flex {
 		gap: 1rem;
 	}

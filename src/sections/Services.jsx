@@ -6,9 +6,24 @@ import { TitleSection } from './components/TitleSection';
 export const Services = () => {
 	const services = [
 		{
+			title: 'Website building',
+			content:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
+			icon: <ion-icon name='hammer'></ion-icon>,
+			link: 'sdsdsdsdsd',
+		},
+		{
+			title: 'Landing pagee',
+			content:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
+			icon: <ion-icon name='hammer'></ion-icon>,
+			link: 'sdsdsdsdsd',
+		},
+		{
 			title: 'Landing page',
-			content: 'sdsdsdsd',
-			icon: <div></div>,
+			content:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
+			icon: <ion-icon name='hammer'></ion-icon>,
 			link: 'sdsdsdsdsd',
 		},
 	];
@@ -31,4 +46,8 @@ export const Services = () => {
 	);
 };
 
-const Container = styled.section``;
+const Container = styled.section`
+	.flex {
+		gap: 2.8rem;
+	}
+`;

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -9,47 +8,56 @@ export const CardServices = ({ title, icon, content, link }) => {
 	return (
 		<Container>
 			<Icon>{icon}</Icon>
-			<MinTitle style={{ cursor: 'pointer' }}>{title}</MinTitle>
-			<Content className='flex'>{content}</Content>
+			<MinTitle>{title}</MinTitle>
+			<Content>{content}</Content>
 			<a href={link} target='_blank' rel='noopener noreferrer'>
-				<Button content='Fiverr' />
+				<Button content='Contract this service' />
 			</a>
 		</Container>
 	);
 };
 
 const Container = styled.article`
-	width: 16rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	align-items: left;
+	justify-content: flex-start;
 	gap: 0.5rem;
+	width: 20rem;
+	padding: 2rem;
+	border-radius: 30px;
+
+	background: ${variables.colors.dark_gray};
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(26, 26, 37, 1) 0%,
+		rgba(26, 26, 37, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(26, 26, 37, 1) 0%,
+		rgba(26, 26, 37, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(26, 26, 37, 1) 0%,
+		rgba(26, 26, 37, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a25",endColorstr="#1a1a25",GradientType=1);
+
+	MinTitle {
+		color: red;
+	}
 	.flex {
 		gap: 1rem;
 	}
 `;
 const Icon = styled(motion.div)`
-	border-radius: 20px;
-	overflow: hidden;
-	width: 100%;
-	height: 10rem;
-	margin-bottom: 0.5rem;
-	position: relative;
-	.description {
-		position: absolute;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		height: 0px;
-		padding: 1rem;
-		overflow: hidden;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		z-index: -1;
-	}
+	font-size: 3rem;
+	color: ${variables.colors.secondary};
 `;
 
-const Content = styled.article``;
+const Content = styled.article`
+	color: ${variables.colors.gray};
+	margin-bottom: 1rem;
+`;

@@ -19,6 +19,7 @@ export const variables = {
 	},
 	mediaQueries: {
 		mobile_l: '425px',
+		mobile_xl: '580px',
 		tablet: '768px',
 		tablet_number: 768,
 		laptop: '1024px',
@@ -36,7 +37,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     body {
         font-family: ${variables.font.main}, sans-serif, Helvetica, Arial ;
-        background-color: ${variables.colors.bg_default};
+        background-color: ${variables.colors.bg_default}; 
         color:  ${variables.colors.font_default};
 	
     }
@@ -62,7 +63,7 @@ export const GlobalStyles = createGlobalStyle`
 		display: grid;
 		justify-content: center;
 		align-items: center;
-		gap: 1rem;
+		gap: 3rem;
 	}
 
 `;
@@ -70,13 +71,13 @@ export const GlobalStyles = createGlobalStyle`
 export const Title = styled.h1`
 	font-weight: ${variables.font.bold};
 	font-family: ${variables.font.titles};
-	font-size: 3rem;
+	font-size: clamp(0.8rem, 8.5vw, 4rem);
 	letter-spacing: 1px;
 `;
 
 export const SubTitle = styled(Title)`
-	font-size: 2rem;
+	font-size: clamp(0.8rem, 7.5vw, 3rem);
 `;
 export const MinTitle = styled(Title)`
-	font-size: 1rem;
+	font-size: clamp(1rem, 4.5vw, 2rem);
 `;
