@@ -24,7 +24,7 @@ const Container = styled.button`
 	all: unset;
 	color: #fff;
 	font-family: ${variables.font.titles};
-	font-weight: ${variables.font.semiBold};
+	font-weight: ${variables.font.main};
 	font-size: 12px;
 	display: flex;
 	text-align: center;

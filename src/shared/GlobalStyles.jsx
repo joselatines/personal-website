@@ -43,6 +43,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 	a {
 		all: unset;
+		cursor: pointer;
 	}
     img {
         width: 100%;
@@ -68,11 +69,12 @@ export const GlobalStyles = createGlobalStyle`
 
 `;
 
-export const Title = styled.h1`
+export const Title = styled.span`
 	font-weight: ${variables.font.bold};
 	font-family: ${variables.font.titles};
 	font-size: clamp(0.8rem, 8.5vw, 4rem);
 	letter-spacing: 1px;
+	display: block; // Because it is a span
 `;
 
 export const SubTitle = styled(Title)`

@@ -3,50 +3,67 @@ import { motion } from 'framer-motion';
 
 import { variables } from '../../shared/GlobalStyles';
 
-export const CardInterest = ({ interest, svg }) => {
-	const pathVariants = {
+export const CardInterest = ({ name, d, viewBox }) => {
+	const svgVariants = {
 		hidden: {
-			opacity: 0,
-			pathLength: 0,
+			fill: variables.colors.bg_default,
 		},
 		visible: {
-			opacity: 1,
-			pathLength: 1,
+			fill: variables.colors.secondary,
 			transition: {
 				duration: 2,
-				ease: 'easeInOut',
+				delay: 1,
 			},
 		},
 	};
+
+	const pathVariants = {
+		hidden: {
+			pathLength: 0,
+		},
+		visible: {
+			pathLength: 1,
+			transition: {
+				duration: 5,
+				ease: 'linear',
+			},
+		},
+	};
+
 	return (
-		<Container>
-			<Svg>{svg}</Svg>
-			<Title>{interest}</Title>
+		<Container className='flex'>
+			<Svg>
+				<motion.svg
+					variants={svgVariants}
+					initial='hidden'
+					whileInView='visible'
+					viewBox={viewBox}
+				>
+					<g>
+						<motion.path
+							variants={pathVariants}
+							whileInView='visible'
+							viewport={{ once: true }}
+							d={d}
+						/>
+					</g>
+				</motion.svg>
+				<Title>{name}</Title>
+			</Svg>
 		</Container>
 	);
 };
 
 const Container = styled.div`
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
 `;
 const Svg = styled.div`
 	width: 5rem;
-	fill: #fff;
-
-	/* 	stroke-dasharray: 1000;
-	stroke-dashoffset: 1000;
-	animation: dash 10s linear forwards;
 	stroke: ${variables.colors.secondary};
-	@keyframes dash {
-		to {
-			stroke-dashoffset: 0;
-		}
-	} */
 `;
 const Title = styled.span`
 	font-size: 0.8rem;
-	font-weight: ${variables.font.semiBold};
+	font-weight: ${variables.font.light};
+	margin-top: 0.8rem;
 `;

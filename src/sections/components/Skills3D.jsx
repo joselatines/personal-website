@@ -89,6 +89,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			{skills.map(({ name, type, posX, posY, gridArea }) => (
 				<motion.h4
 					animate={{ transform: parallaxEffect(posX, posY) }}
+					transition={{ ease: 'linear' }}
 					style={{ gridArea: gridArea }}
 					key={name}
 					className={type}
@@ -104,6 +105,7 @@ const Container = styled.div`
 	position: relative;
 	height: 100%;
 	font-size: 16px;
+	font-family: ${variables.font.titles};
 
 	display: grid;
 	grid-auto-columns: 1fr;

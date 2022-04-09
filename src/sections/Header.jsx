@@ -1,19 +1,28 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+
+import CV from './assets/CV.pdf';
+
 import { Button } from '../shared/Button';
 import { ScrollDown } from './components/ScrollDown';
 import { SubTitle, Title, variables } from '../shared/GlobalStyles';
 
 export const Header = () => {
 	return (
-		<Container className='section'>
+		<Container id='home' className='section'>
 			<Title>Frontend Web Developer</Title>
 			<Name className='flex'>
 				<SubTitle>Jose Latines</SubTitle>
 				<SubTitle className='AKA'>AKA DoctorDraxter</SubTitle>
 			</Name>
 			<Btns className='flex'>
-				<Button content='Download CV' type='outline' />
+				<a
+					href={CV}
+					target='_blank'
+					download='Frontend-Developer-Jose-Latines.pdf'
+				>
+					<Button content='Download CV' type='outline' />
+				</a>
 				<Button content='Projects' />
 			</Btns>
 			<ScrollDownContainer>

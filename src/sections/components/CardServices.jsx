@@ -45,9 +45,6 @@ const Container = styled.article`
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a25",endColorstr="#1a1a25",GradientType=1);
 
-	MinTitle {
-		color: red;
-	}
 	.flex {
 		gap: 1rem;
 	}

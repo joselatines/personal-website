@@ -12,6 +12,7 @@ export const Skills = () => {
 
 	return (
 		<Container
+		id='skills'
 			onMouseMove={e => {
 				setMouseX(e.pageX);
 				setMouseY(e.pageY);

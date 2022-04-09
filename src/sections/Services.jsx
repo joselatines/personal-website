@@ -29,7 +29,7 @@ export const Services = () => {
 	];
 
 	return (
-		<Container className='section'>
+		<Container id='services' className='section'>
 			<TitleSection title='Services' subtitle='What I am currently doing' />
 			<div className='flex'>
 				{services.map(({ title, content, icon, link }) => (

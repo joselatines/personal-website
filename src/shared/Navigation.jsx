@@ -1,19 +1,24 @@
 import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import { variables } from './GlobalStyles';
 import { Button } from './Button';
+import { useEffect } from 'react';
+import { useScrollListener } from '../hooks/useScrollListener';
 
-export const Navigation = () => {
-	const [showNav, setShowNav] = useState(false);
-
-	const list = ['Portfolio', 'Skills', 'Services', 'Clients', 'About Me'];
+export const Navigation = ({ navLinks }) => {
+	const [toggleNav, setToggleNav] = useState(false);
+	const scroll = useScrollListener();
 
 	const variants = {
+		hidden: { opacity: 0, height: '80px' },
 		visible: {
 			opacity: 1,
-			height: showNav ? '350px' : '65px',
+			height: toggleNav ? '360px' : '80px',
+			y: scroll.y > 30 && scroll.y - scroll.lastY > 0 ? -500 : 0,
 			transition: { duration: 0.5 },
 		},
 	};
@@ -21,57 +26,77 @@ export const Navigation = () => {
 	return (
 		<Container
 			// Styled components props only receives strings
-			show={showNav.toString()}
+			togglenav={toggleNav.toString()}
 			variants={variants}
 			initial='hidden'
 			animate='visible'
 		>
-			<Logo className='Logo'>Jose Latines</Logo>
+			<Logo className='Logo'>
+				<HashLink smooth to='#home'>
+					Jose Latines
+				</HashLink>
+			</Logo>
 			<LinksContainer className='LinksContainer'>
 				<Ul className='Ul'>
-					{list.map(el => (
-						<Li key={el}>{el}</Li>
+					{navLinks.map(({ name, id }) => (
+						<Li key={name}>
+							<HashLink smooth to={id}>
+								{name}
+							</HashLink>
+						</Li>
 					))}
 				</Ul>
 			</LinksContainer>
 			<div className='Right'>
-				<Button content='Contact' />
+				<HashLink smooth to='#contact'>
+					<Button content='Contact' />
+				</HashLink>
 			</div>
-			<Hamburger
-				onClick={() => setShowNav(prevState => !prevState)}
-				className='Hamburger'
-			>
-				<Bar show={showNav} />
-				<Bar show={showNav} />
-				<Bar show={showNav} />
+			<Hamburger onClick={() => setToggleNav(!toggleNav)} className='Hamburger'>
+				<Bar togglenav={toggleNav} />
+				<Bar togglenav={toggleNav} />
+				<Bar togglenav={toggleNav} />
 			</Hamburger>
 		</Container>
 	);
 };
 
+Navigation.defaultProps = {
+	navLinks: [
+		{ name: 'Item1', id: '#item1' },
+		{ name: 'Item2', id: '#item2' },
+		{ name: 'Item3', id: '#item3' },
+		{ name: 'Item4', id: '#item4' },
+		{ name: 'Item5', id: '#item5' },
+		{ name: 'Item6', id: '#item6' },
+	],
+};
+
+Navigation.propTypes = {
+	navLinks: PropTypes.array.isRequired,
+};
+
 const Container = styled(motion.nav)`
-	display: ${props => (props.hide === 'true' ? 'none' : 'grid')};
+	display: grid;
 	justify-content: center;
 	align-items: center;
 	grid-template-columns: auto 1fr auto;
 	grid-template-rows: 1fr;
 	grid-template-areas: 'Logo Links Right';
+
 	gap: 1rem;
-
-	position: fixed;
-	top: 15px;
-	left: 50%;
-	z-index: 100;
-	transform: translateX(-50%);
-	width: 90%;
-
-	padding: 1rem 1.5rem;
+	padding: 1rem 2rem;
 	font-size: 1rem;
 	font-family: ${variables.font.titles};
 	font-weight: ${variables.font.semiBold};
 	border-radius: 30px;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+
+	position: fixed;
+	top: 15px;
+	z-index: 100;
+	width: 100%;
 
 	@media only screen and (max-width: ${variables.mediaQueries.tablet}) {
 		grid-template-rows: auto auto;
@@ -95,11 +120,12 @@ const Container = styled(motion.nav)`
 		grid-area: Right;
 	}
 `;
-const Logo = styled.h2`
-	font-size: clamp(.8rem, 2.5vw, 3rem);
+const Logo = styled.div`
+	font-size: clamp(0.8rem, 2.5vw, 3rem);
 	grid-area: Logo;
+	cursor: pointer;
 `;
-const LinksContainer = styled.nav`
+const LinksContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -114,14 +140,9 @@ const Ul = styled.ul`
 `;
 const Li = styled.li`
 	color: ${variables.colors.gray};
-	cursor: pointer;
 	transition: ${variables.transitions.short};
-	&:hover {
-		color: ${variables.colors.font_default};
-	}
-	&.active {
-		border-bottom: solid 1px ${variables.colors.primary};
-		color: ${variables.colors.font_default};
+	a:hover {
+		color: red;
 	}
 `;
 
@@ -139,7 +160,7 @@ const Bar = styled.span`
 	background-color: ${variables.colors.font_default};
 	// Effect
 	${props =>
-		props.show &&
+		props.togglenav &&
 		css`
 			&:nth-child(2) {
 				opacity: 0;

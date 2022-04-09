@@ -24,7 +24,7 @@ export const Clients = () => {
 	];
 
 	return (
-		<Container className='section'>
+		<Container id='clients' className='section'>
 			<TitleSection title='Clients' subtitle='Who I worked' />
 			<div className='flex'>
 				{clients.map(({ name, img, review }) => (

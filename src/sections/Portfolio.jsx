@@ -12,7 +12,7 @@ export const Portfolio = () => {
 			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
 			code: '',
 			preview: '',
-			description:
+			content:
 				'De principio a fin De principio a fin De principio a fin De principio a fin  De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin',
 		},
 		{
@@ -20,7 +20,7 @@ export const Portfolio = () => {
 			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
 			code: '',
 			preview: '',
-			description:
+			content:
 				' a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p',
 		},
 		{
@@ -28,23 +28,23 @@ export const Portfolio = () => {
 			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
 			code: '',
 			preview: '',
-			description:
+			content:
 				'sdsdsddddddddddddddddddddddddddddddddddddddddddddd a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De pddddddddd',
 		},
 	];
 
 	return (
-		<Container className='section'>
+		<Container id='portfolio' className='section'>
 			<TitleSection title='Portfolio' subtitle='What I worked' />
 			<div className='flex'>
-				{projects.map(({ title, img, preview, code, description }) => (
+				{projects.map(({ title, img, preview, code, content }) => (
 					<CardProject
 						key={title}
 						title={title}
 						img={img}
 						code={code}
 						preview={preview}
-						description={description}
+						content={content}
 					/>
 				))}
 			</div>
