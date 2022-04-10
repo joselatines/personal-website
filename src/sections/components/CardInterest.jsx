@@ -8,10 +8,10 @@ export const CardInterest = ({ name, d, viewBox }) => {
 		hidden: {
 			fill: variables.colors.bg_default,
 		},
-		visible: {
+		show: {
 			fill: variables.colors.secondary,
 			transition: {
-				duration: 2,
+				duration: variables.transitions.duration,
 				delay: 1,
 			},
 		},
@@ -21,11 +21,11 @@ export const CardInterest = ({ name, d, viewBox }) => {
 		hidden: {
 			pathLength: 0,
 		},
-		visible: {
+		show: {
 			pathLength: 1,
 			transition: {
-				duration: 5,
-				ease: 'linear',
+				duration: variables.transitions.duration,
+				ease: variables.transitions.ease,
 			},
 		},
 	};
@@ -36,13 +36,14 @@ export const CardInterest = ({ name, d, viewBox }) => {
 				<motion.svg
 					variants={svgVariants}
 					initial='hidden'
-					whileInView='visible'
+					whileInView='show'
+					viewport={{ once: true }}
 					viewBox={viewBox}
 				>
 					<g>
 						<motion.path
 							variants={pathVariants}
-							whileInView='visible'
+							whileInView='show'
 							viewport={{ once: true }}
 							d={d}
 						/>

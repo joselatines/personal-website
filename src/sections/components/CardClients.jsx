@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import { MinTitle, variables } from '../../shared/GlobalStyles';
 import quotationMark from './quotationMark.svg';
@@ -10,6 +9,7 @@ export const CardClients = ({ name, review, stars, img }) => {
 			<QuotationMark>
 				<img src={quotationMark} alt='quotation mark icon' />
 			</QuotationMark>
+
 			<MinTitle>{name}</MinTitle>
 			<Content>
 				<p>{review}</p>
@@ -21,9 +21,11 @@ export const CardClients = ({ name, review, stars, img }) => {
 					<ion-icon name='star'></ion-icon>
 				</Stars>
 			</Content>
+
 			<Img>
 				<img src={img} alt={name + ' review'} />
 			</Img>
+
 			<QuotationMark className='right'>
 				<img src={quotationMark} alt='quotation mark icon' />
 			</QuotationMark>
@@ -31,16 +33,16 @@ export const CardClients = ({ name, review, stars, img }) => {
 	);
 };
 
-const Stars = styled(motion.div)`
+const Stars = styled.div`
 	color: ${variables.colors.secondary};
 	display: flex;
-	gap: 0.3rem;
-	margin-top: 1rem;
+	gap: 0.3em;
+	margin-top: 1em;
 `;
 
 const Img = styled.div`
-	width: 8rem;
-	height: 8rem;
+	width: 8em;
+	height: 8em;
 	background-color: ${variables.colors.bg_default};
 	border: ${variables.colors.bg_default} solid 5px;
 	position: absolute;
@@ -54,7 +56,7 @@ const Img = styled.div`
 	}
 `;
 const QuotationMark = styled.div`
-	width: 5rem;
+	width: 5em;
 	&.right {
 		align-self: flex-end;
 		transform: rotateY(180deg);
@@ -62,7 +64,7 @@ const QuotationMark = styled.div`
 `;
 const Content = styled.article`
 	color: ${variables.colors.gray};
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 `;
 
 const Container = styled.article`
@@ -70,15 +72,16 @@ const Container = styled.article`
 	flex-direction: column;
 	align-items: left;
 	justify-content: flex-start;
-	gap: 0.5rem;
-	width: 25rem;
-	padding: 2rem;
+	gap: 0.5em;
+	width: 25em;
+	padding: 2em;
 	padding-left: 80px; // Space left by img absolute + 10px
 	border-radius: 30px;
 	position: relative;
+	font-size: 14px;
 	@media screen and (max-width: ${variables.mediaQueries.mobile_l}) {
-		padding: 2rem;
-		padding-left: 2rem;
+		padding: 2em;
+		padding-left: 2em;
 		padding-top: 80px; // Space left by img absolute + 10px
 		${Img} {
 			top: -65px;

@@ -5,6 +5,13 @@ import { MinTitle, variables } from '../../shared/GlobalStyles';
 import { Button } from '../../shared/Button';
 
 export const CardServices = ({ title, icon, content, link }) => {
+	const cardVar = {
+		hidden: { scale: 0 },
+		show: {
+			scale: 1,
+			transition: { duration: 0.5, ease: variables.transitions.ease },
+		},
+	};
 	return (
 		<Container>
 			<Icon>{icon}</Icon>
@@ -17,7 +24,7 @@ export const CardServices = ({ title, icon, content, link }) => {
 	);
 };
 
-const Container = styled.article`
+const Container = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: left;

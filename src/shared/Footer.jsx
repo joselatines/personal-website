@@ -60,7 +60,11 @@ export const Footer = ({ socialMedia }) => {
 			<HashLink smooth to='#home'>
 				<ToTop
 					initial={{ y: 100, scale: 0 }}
-					whileInView={{ y: 0, scale: 1, transition: { duration: 0.2 } }}
+					whileInView={{
+						y: 0,
+						scale: 1,
+						transition: { duration: .2},
+					}}
 				>
 					<ion-icon name='arrow-up-outline'></ion-icon>
 				</ToTop>

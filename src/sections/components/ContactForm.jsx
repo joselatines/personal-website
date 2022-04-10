@@ -1,16 +1,19 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
 import { MinTitle, variables } from '../../shared/GlobalStyles';
 import { Button } from '../../shared/Button';
+import toast, { Toaster } from 'react-hot-toast';
 export const ContactForm = () => {
 	const form = useRef();
 
 	const sendEmailFake = e => {
 		e.preventDefault();
-		alert('Sended', e);
+
+		form.current.reset();
+		toast.success('Email sended!');
 	};
 
 	const sendEmail = e => {
@@ -31,26 +34,26 @@ export const ContactForm = () => {
 					console.log(error.text);
 				}
 			);
+		form.current.reset();
+		toast.success('Email sended!');
 	};
 
 	return (
-		<Container ref={form} onSubmit={sendEmailFake}>
+		<Container ref={form} onSubmit={sendEmail}>
+			<Toaster />
 			<MinTitle>Send me a message</MinTitle>
 
 			<InputContainer>
-				<Input type='text' name='name' required />
-				<Placeholder htmlFor='name'>Name</Placeholder>
+				<Input type='text' name='name' required placeholder='Name' />
 				<span className='underline'></span>
 			</InputContainer>
 			<InputContainer>
-				<Input type='email' name='email' required />
-				<Placeholder htmlFor='email'>Email</Placeholder>
+				<Input type='email' name='email' required placeholder='Email' />
 				<span className='underline'></span>
 			</InputContainer>
 			<InputContainer className='textarea'>
-				<Input as='textarea' name='message' required />
+				<Input as='textarea' name='message' required placeholder='Message' />
 				<span className='underline'></span>
-				<Placeholder htmlFor='message'>Message</Placeholder>
 			</InputContainer>
 
 			<Bottom>

@@ -11,8 +11,8 @@ export const variables = {
 	},
 	font: {
 		size: '16px',
-		titles: 'Oswald',
-		main: 'Roboto',
+		titles: 'PT Sans',
+		main: 'Open Sans',
 		bold: 700,
 		semiBold: 600,
 		light: 300,
@@ -26,6 +26,8 @@ export const variables = {
 	},
 	transitions: {
 		short: 'ease-in-out .5s',
+		ease: 'backInOut',
+		duration: 1.5,
 	},
 };
 
@@ -43,6 +45,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 	a {
 		all: unset;
+		transition: ${variables.transitions.short};
 		cursor: pointer;
 	}
     img {
@@ -51,7 +54,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 	.section {
 		padding: 3rem;
+		margin-bottom: 2rem;
 		min-height: 100vh;
+		overflow: hidden;
 	}
 	.flex {
 		display: flex;

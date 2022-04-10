@@ -3,9 +3,13 @@ import { motion } from 'framer-motion';
 export const ScrollDown = () => {
 	const arrowsVariants = {
 		hidden: { y: 0 },
-		visible: {
+		show: {
 			y: 10,
-			transition: { repeat: Infinity, repeatType: 'reverse', duration: 1 },
+			transition: {
+				repeat: Infinity,
+				repeatType: 'reverse',
+				duration: 1,
+			},
 		},
 	};
 	return (
@@ -26,9 +30,12 @@ export const ScrollDown = () => {
 				strokeWidth='2'
 			/>
 			<motion.circle
-		
 				animate={{ y: 50 }}
-				transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1 }}
+				transition={{
+					repeat: Infinity,
+					repeatType: 'reverse',
+					duration: 1,
+				}}
 				cx='28'
 				cy='25'
 				r='8'
@@ -37,7 +44,7 @@ export const ScrollDown = () => {
 			<motion.path
 				variants={arrowsVariants}
 				initial='hidden'
-				animate='visible'
+				animate='show'
 				d='M10 126.538L28 144.538L46 126.538'
 				stroke='white'
 				strokeWidth='2'
@@ -45,7 +52,7 @@ export const ScrollDown = () => {
 			<motion.path
 				variants={arrowsVariants}
 				initial='hidden'
-				animate='visible'
+				animate='show'
 				d='M10 112L28 130L46 112'
 				stroke='white'
 				strokeWidth='2'

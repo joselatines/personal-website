@@ -7,13 +7,8 @@ import { MinTitle, variables } from '../../shared/GlobalStyles';
 export const CardProject = ({ title, img, preview, code, content }) => {
 	const [isFlip, setIsFlip] = useState(false); // Delete this if you want to flip on hover
 
-	const cardVar = {
-		hidden: { scale: 0 },
-		show: { scale: 1, transition: { duration: 1 } },
-	};
-
 	return (
-		<Container variants={cardVar} initial='hidden' whileInView='show'>
+		<Container>
 			<MinTitle>{title}</MinTitle>
 			<Card onClick={() => setIsFlip(!isFlip)} isFlip={isFlip} img={img}>
 				<div className='front'></div>

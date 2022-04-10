@@ -1,23 +1,29 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { ContactForm } from './components/ContactForm';
 
+import { fromTop, scaleUp, stagger } from '../shared/Animations';
 import { MinTitle, variables } from '../shared/GlobalStyles';
 import { TitleSection } from './components/TitleSection';
 
-export const Contact = ({socialMedia}) => {
-	
-
+export const Contact = ({ socialMedia }) => {
 	return (
 		<Container id='contact' className='section'>
 			<div>
 				<TitleSection title='Lets connect!' subtitle='Hire me' />
-				<div className='flex'>
-					<p>
+				<motion.div
+					variants={stagger}
+					initial='hidden'
+					whileInView='show'
+					viewport={{ once: true }}
+					className='flex'
+				>
+					<motion.p variants={fromTop}>
 						If you are interested in collaboratiing on a project, hire me or
 						just want to say hello, write me a message via this contact form or
 						email me at joselatines33@gmail.com
-					</p>
-					<SocialMedia>
+					</motion.p>
+					<SocialMedia as={motion.div} variants={fromTop}>
 						<MinTitle>Social Media</MinTitle>
 						<div className='icons'>
 							{socialMedia.map(({ name, icon, link }) => (
@@ -32,11 +38,17 @@ export const Contact = ({socialMedia}) => {
 							))}
 						</div>
 					</SocialMedia>
-				</div>
+				</motion.div>
 			</div>
-			<div className='formContainer'>
+			<motion.div
+				variants={scaleUp}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true }}
+				className='formContainer'
+			>
 				<ContactForm />
-			</div>
+			</motion.div>
 		</Container>
 	);
 };

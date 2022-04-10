@@ -1,36 +1,28 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
 import { CardClients } from './components/CardClients';
 import { TitleSection } from './components/TitleSection';
 import { variables } from '../shared/GlobalStyles';
+import { fromRight, stagger } from '../shared/Animations';
 
-export const Clients = () => {
-	const clients = [
-		{
-			name: 'Costumer 01',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
-			img: 'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-			link: 'sdsdsd',
-			stars: '5',
-		},
-		{
-			name: 'Costumer 02',
-			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
-			img: 'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-			link: 'sdsdsd',
-			stars: '5',
-		},
-	];
-
+export const Clients = ({ clients }) => {
 	return (
 		<Container id='clients' className='section'>
 			<TitleSection title='Clients' subtitle='Who I worked' />
-			<div className='flex'>
+			<motion.div
+				className='flex'
+				variants={stagger}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true }}
+			>
 				{clients.map(({ name, img, review }) => (
-					<CardClients key={name} name={name} img={img} review={review} />
+					<motion.div variants={fromRight} key={name}>
+						<CardClients name={name} img={img} review={review} />
+					</motion.div>
 				))}
-			</div>
+			</motion.div>
 		</Container>
 	);
 };

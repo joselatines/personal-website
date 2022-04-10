@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import { variables } from './GlobalStyles';
+import { typingVar } from './Animations';
 import { Button } from './Button';
 import { useEffect } from 'react';
 import { useScrollListener } from '../hooks/useScrollListener';
@@ -14,12 +15,12 @@ export const Navigation = ({ navLinks }) => {
 	const scroll = useScrollListener();
 
 	const variants = {
-		hidden: { opacity: 0, height: '80px' },
-		visible: {
+		hidden: { y: -100, height: '80px' },
+		show: {
 			opacity: 1,
 			height: toggleNav ? '360px' : '80px',
 			y: scroll.y > 30 && scroll.y - scroll.lastY > 0 ? -500 : 0,
-			transition: { duration: 0.5 },
+			transition: { duration: .5 },
 		},
 	};
 
@@ -29,11 +30,18 @@ export const Navigation = ({ navLinks }) => {
 			togglenav={toggleNav.toString()}
 			variants={variants}
 			initial='hidden'
-			animate='visible'
+			animate='show'
 		>
 			<Logo className='Logo'>
 				<HashLink smooth to='#home'>
-					Jose Latines
+					<motion.div
+						variants={typingVar}
+						initial='hidden'
+						whileInView='show'
+						className='typewriter'
+					>
+						Jose Latines
+					</motion.div>
 				</HashLink>
 			</Logo>
 			<LinksContainer className='LinksContainer'>
@@ -43,6 +51,7 @@ export const Navigation = ({ navLinks }) => {
 							<HashLink smooth to={id}>
 								{name}
 							</HashLink>
+							<span className='underline'></span>
 						</Li>
 					))}
 				</Ul>
@@ -124,6 +133,35 @@ const Logo = styled.div`
 	font-size: clamp(0.8rem, 2.5vw, 3rem);
 	grid-area: Logo;
 	cursor: pointer;
+
+	.typewriter {
+		/* 		typing 3.5s steps(40, end), */
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: 0.1em solid ${variables.colors.secondary}; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		animation: blink-caret 0.9s step-end infinite;
+	}
+
+	/* The typing effect */
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+		to {
+			width: 100%;
+		}
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
+		from,
+		to {
+			border-color: transparent;
+		}
+		50% {
+			border-color: ${variables.colors.secondary};
+		}
+	}
 `;
 const LinksContainer = styled.div`
 	display: flex;
@@ -141,8 +179,26 @@ const Ul = styled.ul`
 const Li = styled.li`
 	color: ${variables.colors.gray};
 	transition: ${variables.transitions.short};
-	a:hover {
-		color: red;
+	position: relative;
+	&:hover {
+		a {
+			color: ${variables.colors.font_default};
+		}
+		.underline {
+			width: 100%;
+			background-color: ${variables.colors.secondary};
+		}
+	}
+
+	.underline {
+		position: absolute;
+		height: 2px;
+		width: 0%;
+		background-color: ${variables.colors.primary};
+		bottom: -1px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: ${variables.transitions.short};
 	}
 `;
 
