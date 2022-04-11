@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 import CV from './assets/CV.pdf';
 import { Button } from '../shared/Button';
@@ -76,7 +77,9 @@ export const Header = () => {
 				>
 					<Button content='Download CV' type='outline' />
 				</a>
-				<Button content='Projects' />
+				<HashLink smooth to='#portfolio'>
+					<Button content='Projects' />
+				</HashLink>
 			</Btns>
 			<ScrollDownContainer>
 				<ScrollDown />

@@ -20,7 +20,7 @@ export const Navigation = ({ navLinks }) => {
 			opacity: 1,
 			height: toggleNav ? '360px' : '80px',
 			y: scroll.y > 30 && scroll.y - scroll.lastY > 0 ? -500 : 0,
-			transition: { duration: .5 },
+			transition: { duration: 0.5 },
 		},
 	};
 
@@ -86,6 +86,7 @@ Navigation.propTypes = {
 };
 
 const Container = styled(motion.nav)`
+	font-size: .8rem;
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -93,9 +94,8 @@ const Container = styled(motion.nav)`
 	grid-template-rows: 1fr;
 	grid-template-areas: 'Logo Links Right';
 
-	gap: 1rem;
-	padding: 1rem 2rem;
-	font-size: 1rem;
+	gap: 1em;
+	padding: 1em 2em;
 	font-family: ${variables.font.titles};
 	font-weight: ${variables.font.semiBold};
 	border-radius: 30px;
@@ -130,7 +130,7 @@ const Container = styled(motion.nav)`
 	}
 `;
 const Logo = styled.div`
-	font-size: clamp(0.8rem, 2.5vw, 3rem);
+	font-size: clamp(1em, 2.5vw, 35em);
 	grid-area: Logo;
 	cursor: pointer;
 
@@ -167,14 +167,14 @@ const LinksContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 1.5rem;
+	gap: 1.5em;
 	grid-area: Links;
 `;
 
 const Ul = styled.ul`
 	list-style-type: none;
 	display: flex;
-	gap: 1.5rem;
+	gap: 1.5em;
 `;
 const Li = styled.li`
 	color: ${variables.colors.gray};

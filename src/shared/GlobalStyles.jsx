@@ -37,6 +37,19 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+	html {
+  		font-size: 16px;
+	}
+	@media screen and (min-width: 320px) {
+		html {
+			font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+		}
+	}
+	@media screen and (min-width: 1000px) {
+		html {
+			font-size: 22px;
+		}
+	}
     body {
         font-family: ${variables.font.main}, sans-serif, Helvetica, Arial ;
         background-color: ${variables.colors.bg_default}; 
@@ -77,14 +90,14 @@ export const GlobalStyles = createGlobalStyle`
 export const Title = styled.span`
 	font-weight: ${variables.font.bold};
 	font-family: ${variables.font.titles};
-	font-size: clamp(0.8rem, 8.5vw, 4rem);
+	font-size: clamp(2rem, 6.5vw, 10rem);
 	letter-spacing: 1px;
 	display: block; // Because it is a span
 `;
 
 export const SubTitle = styled(Title)`
-	font-size: clamp(0.8rem, 7.5vw, 3rem);
+	font-size: clamp(1.5rem, 3vw, 8rem);
 `;
 export const MinTitle = styled(Title)`
-	font-size: clamp(1rem, 4.5vw, 2rem);
+	font-size: clamp(1rem, 2.5vw, 7rem);
 `;

@@ -58,13 +58,15 @@ export const CardInterest = ({ name, d, viewBox }) => {
 const Container = styled.div`
 	display: flex;
 	text-align: center;
+	font-size: 1rem;
 `;
 const Svg = styled.div`
-	width: 5rem;
+	max-width: 5vw;
+	min-width: 2em;
 	stroke: ${variables.colors.secondary};
 `;
 const Title = styled.span`
-	font-size: 0.8rem;
+	font-size: clamp(.6em, 1vw, 5em);
 	font-weight: ${variables.font.light};
 	margin-top: 0.8rem;
 `;

@@ -29,10 +29,10 @@ export const Clients = ({ clients }) => {
 
 const Container = styled.section`
 	.flex {
-		gap: 90px; // Space left by img absolute + 20px
-	}
-	@media screen and (max-width: ${variables.mediaQueries.mobile_l}) {
-		.flex {
+		gap: 6em; // Space left by img absolute + 20px
+		flex-wrap: nowrap;
+		@media screen and (max-width: ${variables.mediaQueries.tablet}) {
+			flex-wrap: wrap;
 			margin-top: 5rem; // Fix space left byt IMG absolute from CardClients
 		}
 	}

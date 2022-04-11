@@ -47,13 +47,13 @@ const Container = styled(motion.div)`
 const Title = styled(motion.span)`
 	font-weight: ${variables.font.bold};
 	font-family: ${variables.font.titles};
-	font-size: clamp(0.8rem, 8.5vw, 4rem);
+	font-size: clamp(2rem, 5vw, 7rem);
 	letter-spacing: 1px;
 	display: block;
 `;
 const Subtitle = styled(motion.p)`
 	color: ${variables.colors.gray};
 	font-weight: ${variables.font.light};
-	font-size: 1.3rem;
+	font-size: clamp(1rem, 1vw, 5rem);
 	letter-spacing: 0.15em;
 `;

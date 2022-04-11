@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { MinTitle, variables } from '../../shared/GlobalStyles';
+import { MinTitle } from '../../shared/GlobalStyles';
 import { Button } from '../../shared/Button';
 
 export const CardProject = ({ title, img, preview, code, content }) => {

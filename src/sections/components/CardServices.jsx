@@ -25,13 +25,15 @@ export const CardServices = ({ title, icon, content, link }) => {
 };
 
 const Container = styled(motion.div)`
+	font-size: 0.8rem;
 	display: flex;
 	flex-direction: column;
 	align-items: left;
 	justify-content: flex-start;
-	gap: 0.5rem;
-	width: 20rem;
-	padding: 2rem;
+	gap: 0.5em;
+	width: 25vw;
+	min-width: 15em;
+	padding: 2em;
 	border-radius: 30px;
 
 	background: ${variables.colors.dark_gray};
@@ -53,15 +55,15 @@ const Container = styled(motion.div)`
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a25",endColorstr="#1a1a25",GradientType=1);
 
 	.flex {
-		gap: 1rem;
+		gap: 1em;
 	}
 `;
 const Icon = styled(motion.div)`
-	font-size: 3rem;
+	font-size: 3em;
 	color: ${variables.colors.secondary};
 `;
 
 const Content = styled.article`
 	color: ${variables.colors.gray};
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 `;

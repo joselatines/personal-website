@@ -57,11 +57,10 @@ const Container = styled.section`
 	.grid {
 		align-items: flex-start;
 		justify-content: flex-end;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 0.6fr 1.4fr;
 		gap: 5rem;
 		p {
 			margin-bottom: 0.5rem;
-			font-size: 1.2rem;
 		}
 
 		.bottom {
@@ -73,6 +72,7 @@ const Container = styled.section`
 	}
 	.flex {
 		justify-content: unset;
+		align-items: baseline;
 		gap: 2rem;
 	}
 `;
@@ -81,8 +81,6 @@ const Img = styled.div`
 	justify-content: center;
 	align-items: center;
 	img {
-		max-width: 20rem;
-		height: 24rem;
 		border-radius: 20px;
 	}
 `;

@@ -49,7 +49,7 @@ const Container = styled.section`
 	.more {
 		position: absolute;
 		width: fit-content;
-		right: 60px;
-		margin-top: 35px;
+		right: 3rem;
+		margin-top: 2rem;
 	}
 `;

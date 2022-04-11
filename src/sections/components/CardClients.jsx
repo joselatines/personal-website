@@ -41,13 +41,13 @@ const Stars = styled.div`
 `;
 
 const Img = styled.div`
-	width: 8em;
-	height: 8em;
+	width: 12vw;
+	min-width: 8em;
 	background-color: ${variables.colors.bg_default};
-	border: ${variables.colors.bg_default} solid 5px;
+	border: ${variables.colors.bg_default} solid 0.5em;
 	position: absolute;
 	top: 50%;
-	left: -65px;
+	left: -5em;
 	transform: translate(0, -50%);
 	border-radius: 20px;
 	overflow: hidden;
@@ -68,18 +68,20 @@ const Content = styled.article`
 `;
 
 const Container = styled.article`
+	font-size: 0.8rem;
 	display: flex;
 	flex-direction: column;
 	align-items: left;
 	justify-content: flex-start;
 	gap: 0.5em;
-	width: 25em;
 	padding: 2em;
 	padding-left: 80px; // Space left by img absolute + 10px
 	border-radius: 30px;
 	position: relative;
-	font-size: 14px;
-	@media screen and (max-width: ${variables.mediaQueries.mobile_l}) {
+	max-width: 30vw;
+	min-width: 18em;
+
+	@media screen and (max-width: ${variables.mediaQueries.tablet}) {
 		padding: 2em;
 		padding-left: 2em;
 		padding-top: 80px; // Space left by img absolute + 10px

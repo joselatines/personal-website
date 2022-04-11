@@ -15,7 +15,7 @@ export const CardProject = ({ title, img, preview, code, content }) => {
 
 				<div className='back'>
 					<p>{content}</p>
-					<img src={img} alt='' />
+					<img src={img} alt={title} />
 				</div>
 			</Card>
 			<div className='flex'>
@@ -40,8 +40,9 @@ const Container = styled(motion.div)`
 
 const Card = styled.div`
 	/* THE CARD HOLDS THE FRONT AND BACK FACES */
-	width: 16rem;
-	height: 10rem;
+	max-width: 23vw;
+	min-width: 15rem;
+	min-height: 15vw;
 	border-radius: 20px;
 	transform-style: preserve-3d;
 	transition: all 0.8s ease;
@@ -56,7 +57,7 @@ const Card = styled.div`
 	.back {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 100%; 
 		overflow: hidden;
 		backface-visibility: hidden;
 		border-radius: 10px;

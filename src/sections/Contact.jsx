@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { ContactForm } from './components/ContactForm';
+import { Form } from './components/contactForm/Form';
 
 import { fromTop, scaleUp, stagger } from '../shared/Animations';
 import { MinTitle, variables } from '../shared/GlobalStyles';
@@ -47,7 +47,7 @@ export const Contact = ({ socialMedia }) => {
 				viewport={{ once: true }}
 				className='formContainer'
 			>
-				<ContactForm />
+				<Form />
 			</motion.div>
 		</Container>
 	);
@@ -67,7 +67,6 @@ const Container = styled.section`
 
 	p {
 		color: ${variables.colors.gray};
-		font-size: 1.2rem;
 	}
 	.formContainer {
 		display: grid;
@@ -89,10 +88,11 @@ const Container = styled.section`
 
 const SocialMedia = styled.div`
 	display: grid;
+	font-size: 2rem;
 	gap: 0.5rem;
 	a {
 		color: ${variables.colors.secondary};
-		font-size: 3rem;
+
 		transition: ${variables.transitions.short};
 		&:hover {
 			transform: scale(1.1);
