@@ -75,7 +75,11 @@ export const Header = () => {
 					target='_blank'
 					download='Frontend-Developer-Jose-Latines.pdf'
 				>
-					<Button content='Download CV' type='outline' />
+					<Button
+						icon={<ion-icon name='cloud-download-outline'></ion-icon>}
+						content='Download CV'
+						type='outline'
+					/>
 				</a>
 				<HashLink smooth to='#portfolio'>
 					<Button content='Projects' />
@@ -113,7 +117,6 @@ const Name = styled(motion.div)`
 `;
 const Btns = styled(motion.div)`
 	margin: 1rem 0;
-	font-size: 126px;
 	gap: 2rem;
 `;
 const ScrollDownContainer = styled.div`

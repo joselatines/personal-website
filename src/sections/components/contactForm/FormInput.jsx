@@ -4,28 +4,38 @@ import styled from 'styled-components';
 export const FormInput = ({
 	label,
 	errorMessage,
-	onChange,
+	handleChange,
 	type,
+	inputValue,
 	...inputProps
 }) => {
-	console.log(inputProps);
 	return (
 		<Container>
-			<Input
-				as={type === 'textarea' && 'textarea'}
-				className={type === 'textarea' && 'textarea'}
-				{...inputProps}
-			/>
-			<span className='underline'></span>
+			<InputContainer>
+				<InputField
+					as={type === 'textarea' && 'textarea'}
+					className={type === 'textarea' && 'textarea'}
+					onChange={handleChange}
+					value={inputValue}
+					{...inputProps}
+				/>
+				<span className='underline'></span>
+				<Error className='error'>{errorMessage}</Error>
+			</InputContainer>
 		</Container>
 	);
 };
 
-const Input = styled.input``;
-
-const Container = styled.div`
+const InputField = styled.input``;
+const Error = styled.span`
+	display: none;
+	color: ${variables.colors.danger};
+	font-size: 0.8em;
+	transition: ${variables.transitions.short};
+	position: absolute;
+`;
+const InputContainer = styled.div`
 	position: relative;
-	font-size: 0.7rem;
 
 	input,
 	textarea {
@@ -38,9 +48,13 @@ const Container = styled.div`
 		&:focus ~ .underline {
 			width: 100%;
 		}
+		&:invalid ~ ${Error} {
+			display: block;
+		}
 	}
+
 	textarea {
-		display: block; // Fix underline effect
+		display: block; // Fix issue with the underline
 	}
 
 	.underline {
@@ -54,4 +68,8 @@ const Container = styled.div`
 		transform: translateX(-50%);
 		transition: ${variables.transitions.short};
 	}
+`;
+
+const Container = styled.div`
+	font-size: 0.7rem;
 `;

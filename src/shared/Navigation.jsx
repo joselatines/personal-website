@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import { variables } from './GlobalStyles';
 import { typingVar } from './Animations';
 import { Button } from './Button';
-import { useEffect } from 'react';
 import { useScrollListener } from '../hooks/useScrollListener';
 
 export const Navigation = ({ navLinks }) => {

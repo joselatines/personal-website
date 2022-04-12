@@ -6,8 +6,8 @@ import { variables } from './GlobalStyles';
 export const Button = ({ content, icon, type }) => {
 	return (
 		<Container type={type}>
+			{icon && <Icon>{icon}</Icon>}
 			<span>{content}</span>
-			{icon && <span>{icon}</span>}
 		</Container>
 	);
 };
@@ -23,17 +23,19 @@ Button.propTypes = {
 const Container = styled.button`
 	all: unset;
 	color: #fff;
-	font-family: ${variables.font.titles};
+
 	font-weight: ${variables.font.main};
-	font-size: 12px;
+	font-size: 0.6em;
+	
 	display: flex;
-	text-align: center;
 	align-items: center;
 	justify-content: center;
+	gap: 0.5em;
+
 	cursor: pointer;
 	transition: ${variables.transitions.short};
 
-	padding: 0.8em 2em;
+	padding: 0.7em 1.5em;
 	border-radius: 50px;
 	border: 2px solid transparent;
 	background: linear-gradient(
@@ -63,8 +65,8 @@ const Container = styled.button`
 	${props =>
 		props.type === 'circle' &&
 		css`
-			width: 2rem;
-			height: 2rem;
+			width: 2vw;
+			height: 2vw;
 			padding: 1em;
 			border-radius: 50%;
 			position: relative;
@@ -72,8 +74,8 @@ const Container = styled.button`
 				content: '';
 				position: absolute;
 
-				width: 3.5rem;
-				height: 3.5rem;
+				width: 100%;
+				height: 100%;
 				padding: 1em;
 				border-radius: 50%;
 				background: unset;
@@ -92,3 +94,5 @@ const Container = styled.button`
 			}
 		`}
 `;
+
+const Icon = styled.div``;

@@ -8,31 +8,39 @@ import { MinTitle, variables } from '../../../shared/GlobalStyles';
 import { Button } from '../../../shared/Button';
 import toast, { Toaster } from 'react-hot-toast';
 import { FormInput } from './FormInput';
+import { SendButton } from '../../../shared/SendButton';
 export const Form = () => {
 	const form = useRef();
 
-	const [inputsData, setInputsData] = useState({
+	const [values, setValues] = useState({
 		username: '',
 		email: '',
 		message: '',
 	});
 
+	const emailData = {
+		to_name: 'Jose Latines',
+		from_name: values.email,
+		name: values.name,
+		message: values.message,
+		reply_to: values.email,
+	};
 	const inputs = [
 		{
 			name: 'username',
 			type: 'text',
-			placeholder: 'Username',
-			errorMessage:
-				"Username should be 3-16 characters and shouldn't include any special character!",
+			placeholder: 'Name',
+			inputValue: values.username, // Dynamically shows the current state value
+			errorMessage: 'The name must not be empty',
 			label: 'Username',
-			pattern: '^[A-Za-z0-9]{3,16}$',
 			required: true,
 		},
 		{
 			name: 'email',
 			type: 'email',
 			placeholder: 'Email',
-			errorMessage: 'It should be a valid email address!',
+			inputValue: values.email,
+			errorMessage: 'It must be a valid email address!',
 			label: 'Email',
 			required: true,
 		},
@@ -40,54 +48,59 @@ export const Form = () => {
 			name: 'message',
 			type: 'textarea',
 			placeholder: 'Message',
+			inputValue: values.message,
+			errorMessage: 'The message must be at least 5 characters long',
 			label: 'Message',
+			required: true,
 		},
 	];
 
-	const sendEmailFake = e => {
-		e.preventDefault();
-
-		form.current.reset();
-		toast.success('Email sended!');
-	};
+	const handleChange = e =>
+		// Selects the current state and changes it
+		setValues(prevValues => ({
+			...prevValues,
+			[e.target.name]: e.target.value,
+		}));
 
 	const sendEmail = e => {
 		e.preventDefault();
 
 		emailjs
-			.sendForm(
+			.send(
 				'service_8gpefgi',
 				'template_khtx0b7',
-				form.current,
+				emailData,
 				'ogEwGhU5Q3FsEJvf0'
 			)
 			.then(
 				result => {
-					console.log(result.text);
+					setValues({
+						username: '',
+						email: '',
+						message: '',
+					});
 				},
 				error => {
 					console.log(error.text);
 				}
 			);
-		form.current.reset();
+
 		toast.success('Email sended!');
+		form.current.reset();
 	};
 
-	const onChange = e =>
-		setInputsData({ ...inputsData, [e.target.name]: e.target.value });
-
 	return (
-		<Container ref={form} onSubmit={sendEmailFake}>
+		<Container ref={form} onSubmit={sendEmail}>
 			<Toaster />
 			<MinTitle>Send me a message</MinTitle>
 			{inputs.map(input => (
-				<FormInput key={input.name} {...input} onChange={onChange} />
+				<FormInput key={input.name} {...input} handleChange={handleChange} />
 			))}
 
 			<Bottom>
-				<Button content='Send Message'>
+				<SendButton content='Send'>
 					<input type='submit' />
-				</Button>
+				</SendButton>
 			</Bottom>
 		</Container>
 	);

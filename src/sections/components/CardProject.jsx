@@ -20,7 +20,7 @@ export const CardProject = ({ title, img, preview, code, content }) => {
 			</Card>
 			<div className='flex'>
 				<a href={code} target='_blank' rel='noopener noreferrer'>
-					<Button content='Code' type='outline' />
+					<Button content='</> Code' type='outline' />
 				</a>
 				<a href={preview} target='_blank' rel='noopener noreferrer'>
 					<Button content='View' />

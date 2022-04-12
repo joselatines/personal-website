@@ -48,8 +48,8 @@ const Container = styled.section`
 	}
 	.more {
 		position: absolute;
-		width: fit-content;
-		right: 3rem;
+		width: auto;
+		right: 5rem;
 		margin-top: 2rem;
 	}
 `;
