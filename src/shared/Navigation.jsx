@@ -14,10 +14,10 @@ export const Navigation = ({ navLinks }) => {
 	const scroll = useScrollListener();
 
 	const variants = {
-		hidden: { y: -100, height: '80px' },
+		hidden: { y: -100, height: '60px' },
 		show: {
 			opacity: 1,
-			height: toggleNav ? '360px' : '80px',
+			height: toggleNav ? '360px' : '60px',
 			y: scroll.y > 30 && scroll.y - scroll.lastY > 0 ? -500 : 0,
 			transition: { duration: 0.5 },
 		},
@@ -132,34 +132,10 @@ const Logo = styled.div`
 	font-size: clamp(1em, 2.5vw, 35em);
 	grid-area: Logo;
 	cursor: pointer;
-
 	.typewriter {
 		/* 		typing 3.5s steps(40, end), */
 		overflow: hidden; /* Ensures the content is not revealed until the animation */
-		border-right: 0.1em solid ${variables.colors.secondary}; /* The typwriter cursor */
 		white-space: nowrap; /* Keeps the content on a single line */
-		animation: blink-caret 0.9s step-end infinite;
-	}
-
-	/* The typing effect */
-	@keyframes typing {
-		from {
-			width: 0;
-		}
-		to {
-			width: 100%;
-		}
-	}
-
-	/* The typewriter cursor effect */
-	@keyframes blink-caret {
-		from,
-		to {
-			border-color: transparent;
-		}
-		50% {
-			border-color: ${variables.colors.secondary};
-		}
 	}
 `;
 const LinksContainer = styled.div`

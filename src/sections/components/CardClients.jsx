@@ -3,24 +3,43 @@ import styled from 'styled-components';
 import { MinTitle, variables } from '../../shared/GlobalStyles';
 import quotationMark from './quotationMark.svg';
 
-export const CardClients = ({ name, review, stars, img }) => {
+export const CardClients = ({ name, review, stars, link, img, date }) => {
+	console.log(link);
 	return (
 		<Container>
+			{link && <a href={link} target='_blank' rel='noopener noreferrer'></a>}
 			<QuotationMark>
 				<img src={quotationMark} alt='quotation mark icon' />
 			</QuotationMark>
-
 			<MinTitle>{name}</MinTitle>
-			<Content>
-				<p>{review}</p>
-				<Stars>
-					<ion-icon name='star'></ion-icon>
-					<ion-icon name='star'></ion-icon>
-					<ion-icon name='star'></ion-icon>
-					<ion-icon name='star'></ion-icon>
-					<ion-icon name='star'></ion-icon>
-				</Stars>
-			</Content>
+
+			{link ? (
+				<a href={link} target='_blank' rel='noopener noreferrer'>
+					<Content>
+						<p>{review}</p>
+						<Date>{date}</Date>
+						<Stars>
+							<ion-icon name='star'></ion-icon>
+							<ion-icon name='star'></ion-icon>
+							<ion-icon name='star'></ion-icon>
+							<ion-icon name='star'></ion-icon>
+							<ion-icon name='star'></ion-icon>
+						</Stars>
+					</Content>
+				</a>
+			) : (
+				<Content>
+					<p>{review}</p>
+					<Date>{date}</Date>
+					<Stars>
+						<ion-icon name='star'></ion-icon>
+						<ion-icon name='star'></ion-icon>
+						<ion-icon name='star'></ion-icon>
+						<ion-icon name='star'></ion-icon>
+						<ion-icon name='star'></ion-icon>
+					</Stars>
+				</Content>
+			)}
 
 			<Img>
 				<img src={img} alt={name + ' review'} />
@@ -41,7 +60,7 @@ const Stars = styled.div`
 `;
 
 const Img = styled.div`
-	width: 12vw;
+	width: 10vw;
 	min-width: 8em;
 	background-color: ${variables.colors.bg_default};
 	border: ${variables.colors.bg_default} solid 0.5em;
@@ -65,6 +84,10 @@ const QuotationMark = styled.div`
 const Content = styled.article`
 	color: ${variables.colors.gray};
 	margin-bottom: 1em;
+`;
+const Date = styled.span`
+	font-size: 0.9em;
+	font-weight: lighter;
 `;
 
 const Container = styled.article`

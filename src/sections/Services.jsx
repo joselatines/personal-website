@@ -7,7 +7,7 @@ import { fromTop, stagger } from '../shared/Animations';
 export const Services = ({ services }) => {
 	return (
 		<Container id='services' className='section'>
-			<TitleSection title='Services' subtitle='What I am currently doing' />
+			<TitleSection title='Services' subtitle='What I am currently working on' />
 			<motion.div
 				className='flex'
 				variants={stagger}

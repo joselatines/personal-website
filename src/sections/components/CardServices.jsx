@@ -14,9 +14,11 @@ export const CardServices = ({ title, icon, content, link }) => {
 	};
 	return (
 		<Container>
-			<Icon>{icon}</Icon>
-			<MinTitle>{title}</MinTitle>
-			<Content>{content}</Content>
+			<div>
+				<Icon>{icon}</Icon>
+				<MinTitle className='title'>{title}</MinTitle>
+				<Content>{content}</Content>
+			</div>
 			<a href={link} target='_blank' rel='noopener noreferrer'>
 				<Button content='Contract this service' />
 			</a>
@@ -26,13 +28,14 @@ export const CardServices = ({ title, icon, content, link }) => {
 
 const Container = styled(motion.div)`
 	font-size: 0.8rem;
+
 	display: flex;
 	flex-direction: column;
-	align-items: left;
-	justify-content: flex-start;
-	gap: 0.5em;
+	justify-content: space-between;
+
 	width: 25vw;
-	min-width: 15em;
+	min-width: 18em;
+	min-height: 23em;
 	padding: 2em;
 	border-radius: 30px;
 
@@ -54,6 +57,10 @@ const Container = styled(motion.div)`
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a25",endColorstr="#1a1a25",GradientType=1);
 
+		.title {
+			line-height: 1;
+		}
+
 	.flex {
 		gap: 1em;
 	}
@@ -65,5 +72,5 @@ const Icon = styled(motion.div)`
 
 const Content = styled.article`
 	color: ${variables.colors.gray};
-	margin-bottom: 1em;
+	margin: 1em 0;
 `;

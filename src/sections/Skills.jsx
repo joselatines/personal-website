@@ -43,7 +43,7 @@ export const Skills = () => {
 			}}
 			className='section'
 		>
-			<TitleSection title='Skills' subtitle='What I do, what I know' />
+			<TitleSection title='Skills' subtitle='What I have learned' />
 			<motion.div
 				variants={paragraphVar}
 				initial='hidden'
@@ -52,10 +52,16 @@ export const Skills = () => {
 				className='grid'
 			>
 				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis,
-					natus necessitatibus facilis pariatur unde iusto vitae neque
-					cupiditate ipsum magnam itaque quos expedita, quas qui quod sed
-					consequuntur mollitia similique.
+					<p>
+						Able to collaborate with senior developers, I am also willing to
+						spend extra time learning from them.
+					</p>
+					<br />
+					<p>
+						Experience in planning and developing{' '}
+						<strong>high-quality real web applications</strong> with clients
+						from all over the world.
+					</p>
 				</div>
 				<motion.div
 					variants={skillsVar}

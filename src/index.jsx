@@ -1,10 +1,9 @@
-import { StrictMode } from 'react';
-import { Suspense, lazy } from 'react';
+import { StrictMode, Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { App } from './App';
 import { GlobalStyles } from './shared/GlobalStyles';
 import { Loader } from './shared/Loader';
+const App = lazy(() => import('./App'));
 
 const root = createRoot(document.getElementById('root'));
 

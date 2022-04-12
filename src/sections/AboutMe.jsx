@@ -29,13 +29,24 @@ export const AboutMe = ({ interests }) => {
 						viewport={{ once: true }}
 					>
 						<motion.p variants={fromTop}>
-							Hi! I am <strong>Jose Latines</strong> AKA DoctorDraxter a very
-							hardworking <strong>Frontend Developer</strong> from 🇻🇪 who wants
-							to become into <strong>Full Stack. </strong>
+							Hi! I am Jose Latines AKA DoctorDraxter a very hardworking{' '}
+							<strong>Frontend Developer</strong> from 🇻🇪 who wants to become
+							into Full Stack and collaborate in amazing things.
 						</motion.p>
 						<motion.p variants={fromTop}>
-							Why I code? I love coding because I can bring into reality my
-							crazy and fancy ideas, also make life easier.
+							Every month I make content about technology topics in my social
+							media{' '}
+							<a
+								href='https://www.instagram.com/doctordraxter/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								@doctordraxter
+							</a>
+						</motion.p>
+						<motion.p variants={fromTop}>
+							<strong> Why I code? </strong>I love coding because I can bring
+							into reality my crazy and fancy ideas, also make life easier.
 						</motion.p>
 					</motion.div>
 

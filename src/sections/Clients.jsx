@@ -9,7 +9,7 @@ import { fromRight, stagger } from '../shared/Animations';
 export const Clients = ({ clients }) => {
 	return (
 		<Container id='clients' className='section'>
-			<TitleSection title='Clients' subtitle='Who I worked' />
+			<TitleSection title='Clients' subtitle='Who I have worked with' />
 			<motion.div
 				className='flex'
 				variants={stagger}
@@ -17,9 +17,9 @@ export const Clients = ({ clients }) => {
 				whileInView='show'
 				viewport={{ once: true }}
 			>
-				{clients.map(({ name, img, review }) => (
-					<motion.div variants={fromRight} key={name}>
-						<CardClients name={name} img={img} review={review} />
+				{clients.map(clients => (
+					<motion.div variants={fromRight} key={clients.name}>
+						<CardClients {...clients} />
 					</motion.div>
 				))}
 			</motion.div>

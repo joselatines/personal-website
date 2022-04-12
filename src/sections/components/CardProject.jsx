@@ -35,18 +35,22 @@ const Container = styled(motion.div)`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 0.5rem;
+	gap: 0.5em;
+	font-size: 0.9rem;
+	text-align: center;
 `;
 
 const Card = styled.div`
 	/* THE CARD HOLDS THE FRONT AND BACK FACES */
-	max-width: 23vw;
-	min-width: 15rem;
-	min-height: 15vw;
+
 	border-radius: 20px;
 	transform-style: preserve-3d;
 	transition: all 0.8s ease;
 	cursor: pointer;
+
+	min-width: 12em;
+	width: 20vw;
+	height: 8em;
 
 	transform: ${({ isFlip }) => isFlip && 'rotateY(180deg)'};
 	/* HE PSEUDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT 
@@ -57,7 +61,7 @@ const Card = styled.div`
 	.back {
 		position: absolute;
 		width: 100%;
-		height: 100%; 
+		height: 100%;
 		overflow: hidden;
 		backface-visibility: hidden;
 		border-radius: 10px;
@@ -75,13 +79,12 @@ const Card = styled.div`
 		background: transparent;
 		color: ${variables.colors.font_default};
 		transform: rotateY(180deg);
-		font-size: 0.8rem;
-		padding: 1rem;
+		padding: 1em;
 		text-align: center;
 		display: grid;
 		align-items: center;
 		justify-content: center;
-
+		font-size: 0.8em;
 		position: relative;
 
 		img {

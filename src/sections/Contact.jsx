@@ -7,10 +7,20 @@ import { MinTitle, variables } from '../shared/GlobalStyles';
 import { TitleSection } from './components/TitleSection';
 
 export const Contact = ({ socialMedia }) => {
+	const filterSocialMedia = () => {
+		return socialMedia
+			.filter(({ name }) => name !== 'Behance' && name !== 'Twitter')
+			.map(({ name, icon, link }) => (
+				<a key={name} href={link} target='_blank' rel='noopener noreferrer'>
+					{icon}
+				</a>
+			));
+	};
+
 	return (
 		<Container id='contact' className='section'>
 			<div>
-				<TitleSection title='Lets connect!' subtitle='Hire me' />
+				<TitleSection title="Let's connect!" subtitle='Hire me' />
 				<motion.div
 					variants={stagger}
 					initial='hidden'
@@ -19,24 +29,13 @@ export const Contact = ({ socialMedia }) => {
 					className='flex'
 				>
 					<motion.p variants={fromTop}>
-						If you are interested in collaboratiing on a project, hire me or
-						just want to say hello, write me a message via this contact form or
-						email me at joselatines33@gmail.com
+						If you are interested in collaborating in any project, hire me or
+						just want to say hello, write me a message through my email
+						joselatines33@gmail.com and I will respond as soon as possible.
 					</motion.p>
 					<SocialMedia as={motion.div} variants={fromTop}>
 						<MinTitle>Social Media</MinTitle>
-						<div className='icons'>
-							{socialMedia.map(({ name, icon, link }) => (
-								<a
-									key={name}
-									href={link}
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									{icon}
-								</a>
-							))}
-						</div>
+						<div className='icons'>{filterSocialMedia()}</div>
 					</SocialMedia>
 				</motion.div>
 			</div>

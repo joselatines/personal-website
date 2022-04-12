@@ -9,7 +9,7 @@ import { fromTop, stagger } from '../shared/Animations';
 export const Portfolio = ({ projects }) => {
 	return (
 		<Container id='portfolio' className='section'>
-			<TitleSection title='Portfolio' subtitle='What I worked' />
+			<TitleSection title='Portfolio' subtitle='What I have done' />
 			<motion.div
 				className='flex'
 				variants={stagger}

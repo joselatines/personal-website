@@ -11,7 +11,7 @@ import { Footer } from './shared/Footer';
 import { GlobalStyles } from './shared/GlobalStyles';
 import { Navigation } from './shared/Navigation';
 
-export const App = () => {
+const App = () => {
 	const socialMedia = [
 		{
 			name: 'Linkedin',
@@ -28,6 +28,16 @@ export const App = () => {
 			icon: <ion-icon name='logo-twitter'></ion-icon>,
 			link: 'https://twitter.com/ggreg33',
 		},
+		{
+			name: 'Instagram',
+			icon: <ion-icon name='logo-instagram'></ion-icon>,
+			link: 'https://www.instagram.com/doctordraxter/',
+		},
+		{
+			name: 'Behance',
+			icon: <ion-icon name='logo-behance'></ion-icon>,
+			link: 'https://www.behance.net/joselatines?isa0=1',
+		},
 	];
 
 	const navLinks = [
@@ -43,69 +53,70 @@ export const App = () => {
 		{
 			title: 'Website building',
 			content:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
+				'I create real, high quality websites and landing pages for many clients all over the world using HTML5, CSS3, Vanilla Js and React Js as my main js library.',
 			icon: <ion-icon name='hammer'></ion-icon>,
 			link: 'sdsdsdsdsd',
 		},
 		{
-			title: 'Landing pagee',
+			title: 'Set up discord servers',
 			content:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
-			icon: <ion-icon name='hammer'></ion-icon>,
+				'Using my design skills and my experience using discord bots, I create servers for NFT collections and all kinds of communities.',
+			icon: <ion-icon name='logo-discord'></ion-icon>,
 			link: 'sdsdsdsdsd',
 		},
 		{
-			title: 'Landing page',
+			title: 'Email templates, psd to html, etc',
 			content:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
-			icon: <ion-icon name='hammer'></ion-icon>,
+				'I create email and website templates, website bug fixes, psd to html conversions, and anything related to frontend development.',
+			icon: <ion-icon name='cog-outline'></ion-icon>,
 			link: 'sdsdsdsdsd',
 		},
 	];
 
 	const projects = [
 		{
-			title: 'Website Anime',
+			title: 'Gamer Ecommerce',
 			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
-			code: '',
-			preview: '',
+			code: 'https://github.com/joselatines/gaming-ecommerce',
+			preview: 'https://drx-setup-ecommerce.netlify.app/',
 			content:
-				'De principio a fin De principio a fin De principio a fin De principio a fin  De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin De principio a fin',
+				'It simulates a simple e-commerce website where you can filter, add and remove products from your cart',
 		},
 		{
-			title: 'Website Movies',
+			title: 'Shiba-Inu Clone',
 			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
-			code: '',
-			preview: '',
-			content:
-				' a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De p',
+			code: 'https://github.com/joselatines/shiba-inu-clone',
+			preview: 'https://joselatines.github.io/shiba-inu-clone/',
+			content: 'Clone website using sass and vanilla js',
 		},
 		{
-			title: 'Website Spam',
+			title: 'README generator',
 			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
-			code: '',
-			preview: '',
+			code: 'https://github.com/joselatines/project-description-generator',
+			preview: 'https://project-description-generator.netlify.app/',
 			content:
-				'sdsdsddddddddddddddddddddddddddddddddddddddddddddd a fin De principio a fin De p a fin De principio a fin De p a fin De principio a fin De pddddddddd',
+				'In this application you can generate a good description for all your projects base in your entries',
 		},
 	];
 
 	const clients = [
 		{
-			name: 'Costumer 01',
+			name: 'Justin Mora',
 			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
-			img: 'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-			link: 'sdsdsd',
+				'Working with him was very good, very friendly and super efficient, I think I would hire him again in the future. I liked his work.',
+			img: 'https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
+			link: 'https://www.fiverr.com/doctordraxter/create-your-landing-page-for-nft-colletion?context_referrer=user_page&ref_ctx_id=daec16ff69202024d99e1b70fe817895&pckg_id=1&pos=1&rising_talent=true&imp_id=99c0b4ce-a242-46f7-aa66-98f3a28c03a6',
 			stars: '5',
+			date: '23/01/2022',
 		},
 		{
-			name: 'Costumer 02',
+			name: 'Chekili',
 			review:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, magna eu rutrum fringilla, nisi sapien efficitur risus, a blandit est tortor ut urna.',
-			img: 'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-			link: 'sdsdsd',
+				'I liked working with Jose because he was very friendly and quickly understood what I needed for my website.',
+			img: 'https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/f8ff52caaa0c727aef7bca61dbfb16db-1640911774237/c9b260a3-aa52-47d0-87f1-f7a18d087c74.png',
+			link: '',
 			stars: '5',
+			date: '26/02/2022',
 		},
 	];
 
@@ -142,3 +153,5 @@ export const App = () => {
 		</BrowserRouter>
 	);
 };
+
+export default App;

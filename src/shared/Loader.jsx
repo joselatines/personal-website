@@ -4,13 +4,13 @@ export const Loader = () => {
 	return (
 		<Container>
 			<div className='loader'>
-				<div class='loader-square'></div>
-				<div class='loader-square'></div>
-				<div class='loader-square'></div>
-				<div class='loader-square'></div>
-				<div class='loader-square'></div>
-				<div class='loader-square'></div>
-				<div class='loader-square'></div>
+				<div className='loader-square'></div>
+				<div className='loader-square'></div>
+				<div className='loader-square'></div>
+				<div className='loader-square'></div>
+				<div className='loader-square'></div>
+				<div className='loader-square'></div>
+				<div className='loader-square'></div>
 			</div>
 		</Container>
 	);
@@ -124,7 +124,7 @@ const Container = styled.div`
 		height: 28px;
 		margin: 2px;
 		border-radius: 0px;
-		background: white;
+		background: #6333ff;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;

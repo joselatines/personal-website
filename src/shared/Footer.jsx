@@ -10,7 +10,7 @@ export const Footer = ({ socialMedia }) => {
 			<Row>
 				<Column>
 					<a
-						href='https://linktr.ee/joselatines'
+						href='https://www.linkedin.com/in/jose-latines/'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
@@ -23,17 +23,21 @@ export const Footer = ({ socialMedia }) => {
 					<Title>Useful Links</Title>
 					<Ul>
 						<Li>
-							<a href='http://' target='_blank' rel='noopener noreferrer'>
-								How do I made this?
+							<a
+								href='https://github.com/joselatines/personal-website'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Want to see the source code?
 							</a>
 						</Li>
 						<Li>
 							<a
-								href='https://github.com/joselatines'
+								href='https://linktr.ee/joselatines'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								Full Portfolio
+								Personal linktree
 							</a>
 						</Li>
 					</Ul>
@@ -63,7 +67,7 @@ export const Footer = ({ socialMedia }) => {
 					whileInView={{
 						y: 0,
 						scale: 1,
-						transition: { duration: .2},
+						transition: { duration: 0.2 },
 					}}
 				>
 					<ion-icon name='arrow-up-outline'></ion-icon>
