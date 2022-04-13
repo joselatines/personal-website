@@ -20,7 +20,6 @@ export const FormInput = ({
 					{...inputProps}
 				/>
 				<span className='underline'></span>
-				<Error className='error'>{errorMessage}</Error>
 			</InputContainer>
 		</Container>
 	);
