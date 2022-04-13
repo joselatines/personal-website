@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import { useState } from 'react';
-
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { MinTitle, variables } from '../../../shared/GlobalStyles';
-import { Button } from '../../../shared/Button';
-import toast, { Toaster } from 'react-hot-toast';
 import { FormInput } from './FormInput';
 import { SendButton } from '../../../shared/SendButton';
+
 export const Form = () => {
 	const form = useRef();
 
@@ -116,6 +114,7 @@ const Container = styled.form`
 
 	max-width: 100%;
 	min-width: 17em;
+	min-height: 20em;
 
 	background: ${variables.colors.dark_gray};
 	background: -moz-linear-gradient(

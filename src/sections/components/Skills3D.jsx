@@ -82,7 +82,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 	];
 
 	const parallaxEffect = (X = 50, Y = 50) =>
-		`translate(${mouseX / 2 / -X}px, ${mouseY / 2 / -Y}px)`;
+		`translate(${mouseX / -X}px, ${mouseY / -Y}px)`;
 
 	return (
 		<Container>
@@ -104,15 +104,13 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 const Container = styled.div`
 	position: relative;
 	height: 100%;
-	font-size: 16px;
+	width: 100%;
 	font-family: ${variables.font.titles};
 
 	display: grid;
-	grid-auto-columns: 1fr;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(4, auto);
-	justify-content: center;
-	align-items: center;
+	grid-template-columns: 1fr 1fr auto;
+	grid-template-rows: repeat(4, 1fr);
+
 	gap: 1rem;
 	grid-template-areas:
 		'b2 c2 d2'
@@ -121,9 +119,7 @@ const Container = styled.div`
 		'b5 c5 d5';
 
 	padding-top: 3rem; // Fixes wrong position
-	@media screen and (max-width: ${variables.mediaQueries.tablet}) {
-		font-size: 12px;
-	}
+
 	h4 {
 		color: ${variables.colors.secondary};
 		font-weight: ${variables.font.semiBold};
@@ -136,14 +132,14 @@ const Container = styled.div`
 		}
 	}
 	.main {
-		font-size: 2em;
+		font-size: clamp(1rem, 2vw, 5rem);
 	}
 	.medium {
-		font-size: 1em;
+		font-size: clamp(.9rem, 0.8vw, 4.5rem);
 		opacity: 0.7;
 	}
 	.little {
-		font-size: 0.7em;
+		font-size: clamp(.8rem, 0.5vw, 4rem);
 		opacity: 0.5;
 	}
 `;

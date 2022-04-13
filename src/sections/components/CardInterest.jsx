@@ -58,7 +58,6 @@ export const CardInterest = ({ name, d, viewBox }) => {
 const Container = styled.div`
 	display: flex;
 	text-align: center;
-	font-size: 1rem;
 `;
 const Svg = styled.div`
 	max-width: 5vw;

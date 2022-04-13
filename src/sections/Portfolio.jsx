@@ -17,15 +17,9 @@ export const Portfolio = ({ projects }) => {
 				whileInView='show'
 				viewport={{ once: true }}
 			>
-				{projects.map(({ title, img, preview, code, content }) => (
-					<motion.div key={title} variants={fromTop}>
-						<CardProject
-							title={title}
-							img={img}
-							code={code}
-							preview={preview}
-							content={content}
-						/>
+				{projects.map(({ ...projects }) => (
+					<motion.div key={projects.title} variants={fromTop}>
+						<CardProject {...projects} />
 					</motion.div>
 				))}
 			</motion.div>

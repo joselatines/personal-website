@@ -4,10 +4,8 @@ import { MinTitle, variables } from '../../shared/GlobalStyles';
 import quotationMark from './quotationMark.svg';
 
 export const CardClients = ({ name, review, stars, link, img, date }) => {
-	console.log(link);
 	return (
 		<Container>
-			{link && <a href={link} target='_blank' rel='noopener noreferrer'></a>}
 			<QuotationMark>
 				<img src={quotationMark} alt='quotation mark icon' />
 			</QuotationMark>
@@ -55,18 +53,17 @@ export const CardClients = ({ name, review, stars, link, img, date }) => {
 const Stars = styled.div`
 	color: ${variables.colors.secondary};
 	display: flex;
-	gap: 0.3em;
-	margin-top: 1em;
+	gap: 0.3rem;
+	margin-top: 1rem;
 `;
 
 const Img = styled.div`
-	width: 10vw;
-	min-width: 8em;
+	width: 8rem;
 	background-color: ${variables.colors.bg_default};
-	border: ${variables.colors.bg_default} solid 0.5em;
+	border: ${variables.colors.bg_default} solid 0.5rem;
 	position: absolute;
 	top: 50%;
-	left: -5em;
+	left: -4rem;
 	transform: translate(0, -50%);
 	border-radius: 20px;
 	overflow: hidden;
@@ -75,7 +72,7 @@ const Img = styled.div`
 	}
 `;
 const QuotationMark = styled.div`
-	width: 5em;
+	width: 5rem;
 	&.right {
 		align-self: flex-end;
 		transform: rotateY(180deg);
@@ -83,30 +80,31 @@ const QuotationMark = styled.div`
 `;
 const Content = styled.article`
 	color: ${variables.colors.gray};
-	margin-bottom: 1em;
+	margin-bottom: 1rem;
 `;
 const Date = styled.span`
-	font-size: 0.9em;
+	font-size: clamp(0.8rem, 1vw, 3rem);
 	font-weight: lighter;
 `;
 
 const Container = styled.article`
-	font-size: 0.8rem;
+	font-size: clamp(0.8rem, 0.6vw, 5rem);
 	display: flex;
 	flex-direction: column;
 	align-items: left;
 	justify-content: flex-start;
-	gap: 0.5em;
-	padding: 2em;
-	padding-left: 80px; // Space left by img absolute + 10px
+	gap: 0.5rem;
+	padding: 2rem;
+	padding-left: 5rem; // Space left by img absolute + 10px
 	border-radius: 30px;
 	position: relative;
 	max-width: 30vw;
-	min-width: 18em;
+	min-width: 18rem;
+	min-height: 16rem;
 
 	@media screen and (max-width: ${variables.mediaQueries.tablet}) {
-		padding: 2em;
-		padding-left: 2em;
+		padding: 2rem;
+		padding-left: 2rem;
 		padding-top: 80px; // Space left by img absolute + 10px
 		${Img} {
 			top: -65px;

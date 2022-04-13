@@ -31,6 +31,7 @@ const Container = styled.section`
 	.flex {
 		gap: 6em; // Space left by img absolute + 20px
 		flex-wrap: nowrap;
+		align-items: flex-start;
 		@media screen and (max-width: ${variables.mediaQueries.tablet}) {
 			flex-wrap: wrap;
 			margin-top: 5rem; // Fix space left byt IMG absolute from CardClients

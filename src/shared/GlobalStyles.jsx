@@ -62,14 +62,16 @@ export const GlobalStyles = createGlobalStyle`
 		transition: ${variables.transitions.short};
 		cursor: pointer;
 	}
+	p{
+		font-size: clamp(1rem, .8vw, 5rem)
+	}
     img {
         width: 100%;
         object-fit: cover;
     }
 	.section {
-		padding: 3rem;
-		margin-bottom: 2rem;
-		min-height: 100vh;
+		padding:  5rem 3rem;
+		margin: 5rem 0;
 		overflow: hidden;
 	}
 	.flex {

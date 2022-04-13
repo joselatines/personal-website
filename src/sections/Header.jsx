@@ -54,7 +54,7 @@ export const Header = () => {
 	};
 
 	return (
-		<Container id='home' className='section'>
+		<Container id='home'>
 			<motion.div variants={titleVar} initial='hidden' animate='show'>
 				<Title as='h1'>Frontend Web Developer</Title>
 			</motion.div>
@@ -73,6 +73,8 @@ export const Header = () => {
 				<a
 					href={CV}
 					target='_blank'
+					without
+					rel='noreferrer'
 					download='Frontend-Developer-Jose-Latines.pdf'
 				>
 					<Button
@@ -100,6 +102,7 @@ const Container = styled.header`
 	justify-content: center;
 	position: relative;
 	overflow: hidden;
+	min-height: 100vh;
 	#Matrix {
 		position: absolute;
 		z-index: -1;
@@ -109,7 +112,7 @@ const Container = styled.header`
 `;
 const Name = styled(motion.div)`
 	gap: 0.5rem;
-	font-size: 1.8rem;
+	font-size: clamp(1rem, 3vw, 6rem);
 	font-weight: ${variables.font.semiBold};
 	.AKA {
 		color: ${variables.colors.gray};

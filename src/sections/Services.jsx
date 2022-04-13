@@ -7,7 +7,10 @@ import { fromTop, stagger } from '../shared/Animations';
 export const Services = ({ services }) => {
 	return (
 		<Container id='services' className='section'>
-			<TitleSection title='Services' subtitle='What I am currently working on' />
+			<TitleSection
+				title='Services'
+				subtitle='What I am currently working on'
+			/>
 			<motion.div
 				className='flex'
 				variants={stagger}
@@ -15,14 +18,9 @@ export const Services = ({ services }) => {
 				whileInView='show'
 				viewport={{ once: true }}
 			>
-				{services.map(({ title, content, icon, link }) => (
-					<motion.div key={title} variants={fromTop}>
-						<CardServices
-							title={title}
-							content={content}
-							icon={icon}
-							link={link}
-						/>
+				{services.map(({ ...restServices }) => (
+					<motion.div key={services.title} variants={fromTop}>
+						<CardServices {...restServices} />
 					</motion.div>
 				))}
 			</motion.div>
@@ -33,5 +31,6 @@ export const Services = ({ services }) => {
 const Container = styled.section`
 	.flex {
 		gap: 2.8rem;
+		align-items: flex-start;
 	}
 `;

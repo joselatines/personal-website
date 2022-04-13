@@ -5,13 +5,6 @@ import { MinTitle, variables } from '../../shared/GlobalStyles';
 import { Button } from '../../shared/Button';
 
 export const CardServices = ({ title, icon, content, link }) => {
-	const cardVar = {
-		hidden: { scale: 0 },
-		show: {
-			scale: 1,
-			transition: { duration: 0.5, ease: variables.transitions.ease },
-		},
-	};
 	return (
 		<Container>
 			<div>
@@ -27,15 +20,13 @@ export const CardServices = ({ title, icon, content, link }) => {
 };
 
 const Container = styled(motion.div)`
-	font-size: 0.8rem;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-	width: 25vw;
 	min-width: 18em;
-	min-height: 23em;
+	max-width: 20vw;
+	min-height: 50vh;
 	padding: 2em;
 	border-radius: 30px;
 
@@ -57,16 +48,16 @@ const Container = styled(motion.div)`
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a25",endColorstr="#1a1a25",GradientType=1);
 
-		.title {
-			line-height: 1;
-		}
+	.title {
+		line-height: 1;
+	}
 
 	.flex {
 		gap: 1em;
 	}
 `;
 const Icon = styled(motion.div)`
-	font-size: 3em;
+	font-size: clamp(3em, 5vw, 10em);
 	color: ${variables.colors.secondary};
 `;
 

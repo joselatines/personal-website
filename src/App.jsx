@@ -11,6 +11,10 @@ import { Footer } from './shared/Footer';
 import { GlobalStyles } from './shared/GlobalStyles';
 import { Navigation } from './shared/Navigation';
 
+import gamerEcommerce from './img/gamer-ecommerce.png';
+import cloneWebsite from './img/clone-website.png';
+import readme from './img/readme.png';
+
 const App = () => {
 	const socialMedia = [
 		{
@@ -55,28 +59,28 @@ const App = () => {
 			content:
 				'I create real, high quality websites and landing pages for many clients all over the world using HTML5, CSS3, Vanilla Js and React Js as my main js library.',
 			icon: <ion-icon name='hammer'></ion-icon>,
-			link: 'sdsdsdsdsd',
+			link: 'https://www.fiverr.com/share/qR2VRp',
 		},
 		{
 			title: 'Set up discord servers',
 			content:
 				'Using my design skills and my experience using discord bots, I create servers for NFT collections and all kinds of communities.',
 			icon: <ion-icon name='logo-discord'></ion-icon>,
-			link: 'sdsdsdsdsd',
+			link: 'https://www.fiverr.com/share/9wmqwK',
 		},
 		{
 			title: 'Email templates, psd to html, etc',
 			content:
 				'I create email and website templates, website bug fixes, psd to html conversions, and anything related to frontend development.',
 			icon: <ion-icon name='cog-outline'></ion-icon>,
-			link: 'sdsdsdsdsd',
+			link: 'https://www.fiverr.com/share/rrVXpr',
 		},
 	];
 
 	const projects = [
 		{
 			title: 'Gamer Ecommerce',
-			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
+			img: gamerEcommerce,
 			code: 'https://github.com/joselatines/gaming-ecommerce',
 			preview: 'https://drx-setup-ecommerce.netlify.app/',
 			content:
@@ -84,14 +88,14 @@ const App = () => {
 		},
 		{
 			title: 'Shiba-Inu Clone',
-			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
+			img: cloneWebsite,
 			code: 'https://github.com/joselatines/shiba-inu-clone',
 			preview: 'https://joselatines.github.io/shiba-inu-clone/',
 			content: 'Clone website using sass and vanilla js',
 		},
 		{
 			title: 'README generator',
-			img: 'https://mockuptree.com/wp-content/uploads/edd/2018/12/clean-website-showcase-mockup.jpg',
+			img: readme,
 			code: 'https://github.com/joselatines/project-description-generator',
 			preview: 'https://project-description-generator.netlify.app/',
 			content:

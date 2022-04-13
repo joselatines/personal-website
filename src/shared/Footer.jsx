@@ -78,16 +78,14 @@ export const Footer = ({ socialMedia }) => {
 };
 
 const Container = styled.footer`
-	font-size: 13px;
-
 	display: flex;
 	align-items: center;
-	gap: 1em;
+	gap: 1rem;
 	position: relative;
 
 	background-color: ${variables.colors.primary};
 	color: ${variables.colors.font_default};
-	padding: 3em;
+	padding: 3rem;
 `;
 
 const Row = styled.div`
@@ -95,24 +93,22 @@ const Row = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 2em;
+	gap: 2rem;
 	width: 100%;
 `;
 
 const Column = styled.div``;
 const Title = styled.span`
-	font-size: 2em;
 	font-weight: ${variables.font.semiBold};
 `;
 const Subtitle = styled.h1`
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	font-weight: ${variables.font.light};
 `;
 const Ul = styled.ul`
 	list-style-type: none;
 `;
 const Li = styled.li`
-	font-size: 1.1em;
 	transition: ${variables.transitions.short};
 	&:hover {
 		transform: translateX(5px);
@@ -134,7 +130,7 @@ const ToTop = styled(motion.div)`
 		#4924c2 100%
 	);
 	-webkit-box-shadow: 5px 5px 15px 5px rgba(99, 51, 255, 0.19);
-	padding: 0.6em 0.8em;
+	padding: 0.6em 0.8rem;
 	border-radius: 15px 0 00 15px;
 	cursor: pointer;
 
@@ -148,10 +144,10 @@ const ToTop = styled(motion.div)`
 
 const SocialMedia = styled.div`
 	display: grid;
-	gap: 0.5em;
+	gap: 0.5rem;
 	a {
 		color: ${variables.colors.font_default};
-		font-size: 2em;
+		font-size: 2rem;
 		transition: ${variables.transitions.short};
 		&:hover {
 			color: ${variables.colors.secondary};
@@ -160,6 +156,6 @@ const SocialMedia = styled.div`
 	.icons {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5em;
+		gap: 0.5rem;
 	}
 `;

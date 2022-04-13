@@ -71,12 +71,12 @@ export const Navigation = ({ navLinks }) => {
 
 Navigation.defaultProps = {
 	navLinks: [
-		{ name: 'Item1', id: '#item1' },
-		{ name: 'Item2', id: '#item2' },
-		{ name: 'Item3', id: '#item3' },
-		{ name: 'Item4', id: '#item4' },
-		{ name: 'Item5', id: '#item5' },
-		{ name: 'Item6', id: '#item6' },
+		{ name: 'Itrem1', id: '#itrem1' },
+		{ name: 'Itrem2', id: '#itrem2' },
+		{ name: 'Itrem3', id: '#itrem3' },
+		{ name: 'Itrem4', id: '#itrem4' },
+		{ name: 'Itrem5', id: '#itrem5' },
+		{ name: 'Itrem6', id: '#itrem6' },
 	],
 };
 
@@ -85,7 +85,6 @@ Navigation.propTypes = {
 };
 
 const Container = styled(motion.nav)`
-	font-size: .8rem;
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -93,8 +92,8 @@ const Container = styled(motion.nav)`
 	grid-template-rows: 1fr;
 	grid-template-areas: 'Logo Links Right';
 
-	gap: 1em;
-	padding: 1em 2em;
+	gap: 1rem;
+	padding: 1rem 2rem;
 	font-family: ${variables.font.titles};
 	font-weight: ${variables.font.semiBold};
 	border-radius: 30px;
@@ -129,7 +128,7 @@ const Container = styled(motion.nav)`
 	}
 `;
 const Logo = styled.div`
-	font-size: clamp(1em, 2.5vw, 35em);
+	font-size: clamp(1rem, 2.5vw, 20rem);
 	grid-area: Logo;
 	cursor: pointer;
 	.typewriter {
@@ -142,14 +141,15 @@ const LinksContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 1.5em;
+	gap: 1.5rem;
 	grid-area: Links;
 `;
 
 const Ul = styled.ul`
 	list-style-type: none;
 	display: flex;
-	gap: 1.5em;
+	gap: 1.5rem;
+	font-size: clamp(1rem, 1vw, 2rem);
 `;
 const Li = styled.li`
 	color: ${variables.colors.gray};

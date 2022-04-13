@@ -48,9 +48,9 @@ const Card = styled.div`
 	transition: all 0.8s ease;
 	cursor: pointer;
 
-	min-width: 12em;
-	width: 20vw;
-	height: 8em;
+	width: 14vw;
+	height: 10em;
+	min-width: 16em;
 
 	transform: ${({ isFlip }) => isFlip && 'rotateY(180deg)'};
 	/* HE PSEUDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT 
@@ -73,6 +73,8 @@ const Card = styled.div`
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		width: 100%;
+		height: 100%;
 	}
 	/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
 	.back {
