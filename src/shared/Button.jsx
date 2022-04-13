@@ -67,7 +67,7 @@ const Container = styled.button`
 		css`
 			width: 2vw;
 			height: 2vw;
-			padding: 1em;
+			padding: .8rem;
 			border-radius: 50%;
 			position: relative;
 			&:before {

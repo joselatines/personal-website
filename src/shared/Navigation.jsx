@@ -128,7 +128,7 @@ const Container = styled(motion.nav)`
 	}
 `;
 const Logo = styled.div`
-	font-size: clamp(1rem, 2.5vw, 20rem);
+	font-size: clamp(1rem, 1.5vw, 7rem);
 	grid-area: Logo;
 	cursor: pointer;
 	.typewriter {

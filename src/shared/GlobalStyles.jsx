@@ -56,6 +56,22 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${variables.colors.bg_default}; 
         color:  ${variables.colors.font_default};
 	
+	&::-webkit-scrollbar {
+			width: 15px;
+			height: 15px;
+		}
+	&::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	&::-webkit-scrollbar-thumb {
+			background-image: linear-gradient(45deg, #9270ff, #6333FF);
+			border-radius: 10px;
+			-webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+		}
+
+}
+
     }
 	a {
 		all: unset;
