@@ -27,15 +27,11 @@ const App = () => {
 			icon: <ion-icon name='logo-github'></ion-icon>,
 			link: 'https://github.com/joselatines',
 		},
-		{
-			name: 'Twitter',
-			icon: <ion-icon name='logo-twitter'></ion-icon>,
-			link: 'https://twitter.com/ggreg33',
-		},
+
 		{
 			name: 'Instagram',
 			icon: <ion-icon name='logo-instagram'></ion-icon>,
-			link: 'https://www.instagram.com/doctordraxter/',
+			link: 'https://www.instagram.com/gregg.33/',
 		},
 		{
 			name: 'Behance',
@@ -87,19 +83,19 @@ const App = () => {
 				'It simulates a simple e-commerce website where you can filter, add and remove products from your cart',
 		},
 		{
+			title: 'README generator',
+			img: readme,
+			code: 'https://github.com/joselatines/readme-project-generator',
+			preview: 'readme-project-generator.netlify.app',
+			content:
+				'This is a free open source tool, created to speed up the creation time of our readmes files',
+		},
+		{
 			title: 'Shiba-Inu Clone',
 			img: cloneWebsite,
 			code: 'https://github.com/joselatines/shiba-inu-clone',
 			preview: 'https://joselatines.github.io/shiba-inu-clone/',
 			content: 'Clone website using sass and vanilla js',
-		},
-		{
-			title: 'README generator',
-			img: readme,
-			code: 'https://github.com/joselatines/project-description-generator',
-			preview: 'https://readme-project-generator.netlify.app',
-			content:
-				'This is a free open source tool, created to speed up the creation time of our readmes files',
 		},
 	];
 

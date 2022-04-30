@@ -57,6 +57,7 @@ const Card = styled.div`
 	&:hover {
 		transform: rotateY(180deg);
 	} */
+
 	.front,
 	.back {
 		position: absolute;

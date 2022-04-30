@@ -19,7 +19,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			gridArea: 'b4',
 		},
 		{
-			name: 'CSS',
+			name: 'Redux',
 			type: 'main',
 			priority: 3,
 			posX: 25,
@@ -27,12 +27,12 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			gridArea: 'd4',
 		},
 		{
-			name: 'Styled-components',
+			name: 'Jest',
 			type: 'medium',
 			gridArea: 'c4',
 		},
 		{
-			name: 'Framer motion',
+			name: 'Styled-components',
 			type: 'medium',
 			gridArea: 'b3',
 			posX: 85,
