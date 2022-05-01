@@ -86,7 +86,7 @@ const App = () => {
 			title: 'README generator',
 			img: readme,
 			code: 'https://github.com/joselatines/readme-project-generator',
-			preview: 'readme-project-generator.netlify.app',
+			preview: 'https://readme-project-generator.netlify.app',
 			content:
 				'This is a free open source tool, created to speed up the creation time of our readmes files',
 		},
