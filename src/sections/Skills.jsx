@@ -54,7 +54,7 @@ export const Skills = () => {
 				<div>
 					<p>
 						I specialized in Javascript ES6+, using React Js as a main framework but I don't have any trouble learning 
-						a other Frameworks, I love learning new things.
+						other Frameworks, I love learning new things.
 					</p>
 					<br />
 					<p>
