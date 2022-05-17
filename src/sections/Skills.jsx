@@ -53,14 +53,13 @@ export const Skills = () => {
 			>
 				<div>
 					<p>
-						Able to collaborate with senior developers, I am also willing to
-						spend extra time learning from them.
+						I specialized in Javascript ES6+, using React Js as a main framework but I don't have any trouble learning 
+						a other Frameworks, I love learning new things.
 					</p>
 					<br />
 					<p>
-						Experience in planning and developing{' '}
-						<strong>high-quality real web applications</strong> with clients
-						from all over the world.
+					Excellent communication and teamwork, fast learner and problem solver, able to work under pressure
+					with limited time.
 					</p>
 				</div>
 				<motion.div

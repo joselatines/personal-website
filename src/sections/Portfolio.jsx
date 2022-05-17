@@ -25,7 +25,7 @@ export const Portfolio = ({ projects }) => {
 			</motion.div>
 			<div className='more'>
 				<a
-					href='https://www.behance.net/joselatines'
+					href='https://github.com/joselatines'
 					target='_blank'
 					rel='noopener noreferrer'
 				>

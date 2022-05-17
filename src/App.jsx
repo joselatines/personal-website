@@ -12,7 +12,7 @@ import { GlobalStyles } from './shared/GlobalStyles';
 import { Navigation } from './shared/Navigation';
 
 import gamerEcommerce from './img/gamer-ecommerce.png';
-import hboClone from './img/hbo-clone.jpg';
+import hboClone from './img/hbo-clone.png';
 import readme from './img/readme.png';
 
 const App = () => {
@@ -59,21 +59,21 @@ const App = () => {
 			content:
 				'I create real, high quality websites and landing pages for many clients all over the world using HTML5, CSS3, Vanilla Js and React Js as my main js library.',
 			icon: <ion-icon name='hammer'></ion-icon>,
-			link: 'https://www.fiverr.com/share/qR2VRp',
+			link: 'https://www.fiverr.com/share/aowZ1a',
 		},
 		{
 			title: 'Set up discord servers',
 			content:
 				'Using my design skills and my experience using discord bots, I create servers for NFT collections and all kinds of communities.',
 			icon: <ion-icon name='logo-discord'></ion-icon>,
-			link: 'https://www.fiverr.com/share/9wmqwK',
+			link: 'https://www.fiverr.com/share/zlvR5z',
 		},
 		{
 			title: 'Email templates, psd to html, etc',
 			content:
 				'I create email and website templates, website bug fixes, psd to html conversions, and anything related to frontend development.',
 			icon: <ion-icon name='cog-outline'></ion-icon>,
-			link: 'https://www.fiverr.com/share/rrVXpr',
+			link: 'https://www.fiverr.com/share/L9kX27',
 		},
 	];
 
@@ -156,9 +156,9 @@ const App = () => {
 			<Header />
 			<Portfolio projects={projects} />
 			<Skills />
+			<AboutMe interests={interests} />
 			<Services services={services} />
 			<Clients clients={clients} />
-			<AboutMe interests={interests} />
 			<Contact socialMedia={socialMedia} />
 			<Footer socialMedia={socialMedia} />
 			<GlobalStyles />

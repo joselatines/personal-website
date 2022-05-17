@@ -29,10 +29,20 @@ export const AboutMe = ({ interests }) => {
 						viewport={{ once: true }}
 					>
 						<motion.p variants={fromTop}>
-							Hi! I am Jose Latines a <strong>Frontend Developer </strong> from 🇻🇪 specialized in technologies such as Reactjs.
+							Hi! I am Jose Latines a 19 years old <strong> Frontend Developer </strong> from 🇻🇪 specialized in technologies such as Reactjs.
 						</motion.p>
 						<motion.p variants={fromTop}>
-						I love learing new things and help others, that's why I write about JavaScript and technology in my social media.{' '}
+						I am currently a <strong> Freelance  Developer </strong>but I am looking to work in a full time job.
+						I am also studying systems engineering at the {' '} <a
+								href='https://www.uneti.edu.ve/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)
+							</a> 
+						</motion.p>
+						<motion.p variants={fromTop}>
+						I love learing new things and help others, that's why I write about JavaScript and technology in my social media{' '}
 							<a
 								href='https://dev.to/joselatines'
 								target='_blank'
@@ -40,12 +50,6 @@ export const AboutMe = ({ interests }) => {
 							>
 								@joselatines_
 							</a>
-						</motion.p>
-						<motion.p variants={fromTop}>
-						I am currently a <strong> Freelance </strong> Developer but I am looking to work in a full time job.
-						</motion.p>
-						<motion.p variants={fromTop}>
-						I love coding because I can bring into reality my crazy and fancy ideas and also make life easier.
 						</motion.p>
 					</motion.div>
 
