@@ -78,7 +78,7 @@ export const GlobalStyles = createGlobalStyle`
 		transition: ${variables.transitions.short};
 		cursor: pointer;
 		&:hover {
-			color: ${variables.colors.primary};
+			color: ${variables.colors.secondary};
 		}
 	}
 	p{
