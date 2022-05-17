@@ -12,7 +12,7 @@ import { GlobalStyles } from './shared/GlobalStyles';
 import { Navigation } from './shared/Navigation';
 
 import gamerEcommerce from './img/gamer-ecommerce.png';
-import cloneWebsite from './img/clone-website.png';
+import hboClone from './img/hbo-clone.jpg';
 import readme from './img/readme.png';
 
 const App = () => {
@@ -27,11 +27,15 @@ const App = () => {
 			icon: <ion-icon name='logo-github'></ion-icon>,
 			link: 'https://github.com/joselatines',
 		},
-
 		{
 			name: 'Instagram',
 			icon: <ion-icon name='logo-instagram'></ion-icon>,
 			link: 'https://www.instagram.com/gregg.33/',
+		},
+		{
+			name: 'Twitter',
+			icon: <ion-icon name='logo-twitter'></ion-icon>,
+			link: 'https://twitter.com/joselatines_',
 		},
 		{
 			name: 'Behance',
@@ -83,7 +87,7 @@ const App = () => {
 				'It simulates a simple e-commerce website where you can filter, add and remove products from your cart',
 		},
 		{
-			title: 'README generator',
+			title: 'README generator tool',
 			img: readme,
 			code: 'https://github.com/joselatines/readme-project-generator',
 			preview: 'https://readme-project-generator.netlify.app',
@@ -91,12 +95,20 @@ const App = () => {
 				'This is a free open source tool, created to speed up the creation time of our readmes files',
 		},
 		{
+			title: 'HBO Max Clone',
+			img: hboClone,
+			code: 'https://github.com/joselatines/hbo-max-clone',
+			preview: 'https://hbo-max-clone-tau.vercel.app/',
+			content:
+				'Clone website made in Next Js. In this project I wanted to keep it simple and show that I can handle an api',
+		},
+		/* {
 			title: 'Shiba-Inu Clone',
 			img: cloneWebsite,
 			code: 'https://github.com/joselatines/shiba-inu-clone',
 			preview: 'https://joselatines.github.io/shiba-inu-clone/',
 			content: 'Clone website using sass and vanilla js',
-		},
+		}, */
 	];
 
 	const clients = [

@@ -29,29 +29,28 @@ export const AboutMe = ({ interests }) => {
 						viewport={{ once: true }}
 					>
 						<motion.p variants={fromTop}>
-							Hi! I am Jose Latines AKA DoctorDraxter a very hardworking{' '}
-							<strong>Frontend Developer</strong> from 🇻🇪 who wants to become
-							into Full Stack and collaborate in amazing things.
+							Hi! I am Jose Latines a <strong>Frontend Developer </strong> from 🇻🇪 specialized in technologies such as Reactjs.
 						</motion.p>
 						<motion.p variants={fromTop}>
-							Every month I make content about technology topics in my social
-							media{' '}
+						I love learing new things and help others, that's why I write about JavaScript and technology in my social media.{' '}
 							<a
-								href='https://www.instagram.com/doctordraxter/'
+								href='https://dev.to/joselatines'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								@doctordraxter
+								@joselatines_
 							</a>
 						</motion.p>
 						<motion.p variants={fromTop}>
-							<strong> Why I code? </strong>I love coding because I can bring
-							into reality my crazy and fancy ideas, also make life easier.
+						I am currently a <strong> Freelance </strong> Developer but I am looking to work in a full time job.
+						</motion.p>
+						<motion.p variants={fromTop}>
+						I love coding because I can bring into reality my crazy and fancy ideas and also make life easier.
 						</motion.p>
 					</motion.div>
 
 					<InterestContainer>
-						<MinTitle>Interest</MinTitle>
+						<MinTitle>Interests</MinTitle>
 						<div className='flex'>
 							{interests.map(({ name, d, viewBox }) => (
 								<CardInterest key={name} name={name} d={d} viewBox={viewBox} />
