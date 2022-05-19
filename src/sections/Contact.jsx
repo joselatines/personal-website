@@ -9,7 +9,7 @@ import { TitleSection } from './components/TitleSection';
 export const Contact = ({ socialMedia }) => {
 	const filterSocialMedia = () => {
 		return socialMedia
-			.filter(({ name }) => name !== 'Behance' && name !== 'Twitter')
+			.filter(({ name }) => name !== 'Behance' && name !== 'Instagram')
 			.map(({ name, icon, link }) => (
 				<a key={name} href={link} target='_blank' rel='noopener noreferrer'>
 					{icon}
