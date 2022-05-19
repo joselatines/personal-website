@@ -35,12 +35,12 @@ const App = () => {
 		{
 			name: 'Twitter',
 			icon: <ion-icon name='logo-twitter'></ion-icon>,
-			link: 'https://twitter.com/joselatines_',
+			link: 'https://twitter.com/joselatines33',
 		},
 		{
 			name: 'Behance',
 			icon: <ion-icon name='logo-behance'></ion-icon>,
-			link: 'https://www.behance.net/joselatines?isa0=1',
+			link: 'https://www.behance.net/joselatines',
 		},
 	];
 
