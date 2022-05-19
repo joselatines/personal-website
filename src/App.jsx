@@ -84,7 +84,7 @@ const App = () => {
 			code: 'https://github.com/joselatines/gaming-ecommerce',
 			preview: 'https://drx-setup-ecommerce.netlify.app/',
 			content:
-				'It simulates a simple e-commerce website where you can filter, add and remove products from your cart',
+				'Made in React Js. Simulates a simple e-commerce website where you can filter, add and remove products from your cart',
 		},
 		{
 			title: 'README generator tool',
@@ -92,7 +92,7 @@ const App = () => {
 			code: 'https://github.com/joselatines/readme-project-generator',
 			preview: 'https://readme-project-generator.netlify.app',
 			content:
-				'This is a free open source tool, created to speed up the creation time of our readmes files',
+				'This is a free open source tool, created to speed up the creation time of our readmes files. (React)',
 		},
 		{
 			title: 'HBO Max Clone',
@@ -100,7 +100,7 @@ const App = () => {
 			code: 'https://github.com/joselatines/hbo-max-clone',
 			preview: 'https://hbo-max-clone-tau.vercel.app/',
 			content:
-				'Clone website made in Next Js. In this project I wanted to keep it simple and show that I can handle an api',
+				'Clone website made in Next Js where I am calling the movie database api.',
 		},
 		/* {
 			title: 'Shiba-Inu Clone',
