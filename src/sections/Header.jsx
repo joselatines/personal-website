@@ -64,7 +64,7 @@ export const Header = () => {
 				animate='show'
 				className='flex'
 			>
-				<motion.span variants={subtitleVar}>José Gregorio Latines Jiménez</motion.span>
+				<motion.span variants={subtitleVar}>José Gregorio Latines</motion.span>
 			</Name>
 			<Btns className='flex' variants={btnVar} initial='hidden' animate='show'>
 				<a
