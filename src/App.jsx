@@ -20,7 +20,7 @@ const App = () => {
 		{
 			name: 'Linkedin',
 			icon: <ion-icon name='logo-linkedin'></ion-icon>,
-			link: 'https://www.linkedin.com/in/jose-latines/',
+			link: 'https://www.linkedin.com/in/joselatines/',
 		},
 		{
 			name: 'Github',
