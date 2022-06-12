@@ -97,7 +97,7 @@ const projects = [
 		preview: 'https://hiromi-sushi.netlify.app/',
 		content:
 			"Landing page template created for restaurants that don't want to have a big Ecommerce and they prioritize the transactions on Instagram, WhatsApp or inside the restaurant.",
-		type: 'Personal',
+		type: 'Work',
 		tools: ['Typescript', 'React js', 'Landing page template'],
 	},
 	{
