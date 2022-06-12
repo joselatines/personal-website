@@ -19,7 +19,7 @@ export const AboutMe = ({ interests }) => {
 					whileInView='show'
 					viewport={{ once: true }}
 				>
-					<img src={img} alt='jose latines' />
+					<img src={img} alt='José latines' />
 				</Img>
 				<div>
 					<motion.div
@@ -29,7 +29,7 @@ export const AboutMe = ({ interests }) => {
 						viewport={{ once: true }}
 					>
 						<motion.p variants={fromTop}>
-							Hi! I am Jose Latines a 19 years old <strong> Frontend Developer </strong> from 🇻🇪 specialized in technologies such as Reactjs.
+							Hi! I am Jose Latines a 19 years old <strong> Frontend Developer </strong> from 🇻🇪 specialized in technologies such as React js.
 						</motion.p>
 						<motion.p variants={fromTop}>
 						I am currently a <strong> Freelance  Developer </strong>but I am looking to work in a full time job.
@@ -42,13 +42,13 @@ export const AboutMe = ({ interests }) => {
 							</a> 
 						</motion.p>
 						<motion.p variants={fromTop}>
-						I love learing new things and help others, that's why I write about JavaScript and technology in my social media{' '}
+						I love learning new things and help others, that's why I write about JavaScript and technology in my social media{' '}
 							<a
 								href='https://dev.to/joselatines'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								@joselatines_
+								@joselatines33
 							</a>
 						</motion.p>
 					</motion.div>
