@@ -26,7 +26,7 @@ const Container = styled.button`
 
 	font-weight: ${variables.font.main};
 	font-size: 0.6em;
-	
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -56,18 +56,18 @@ const Container = styled.button`
 		transform: translateY(-1px);
 	}
 
-	${props =>
-		props.type === 'outline' &&
+	${({ type }) =>
+		type === 'outline' &&
 		css`
 			border: 2px solid ${variables.colors.primary};
 			background: unset;
 		`}
-	${props =>
-		props.type === 'circle' &&
+	${({ type }) =>
+		type === 'circle' &&
 		css`
 			width: 2vw;
 			height: 2vw;
-			padding: .8rem;
+			padding: 0.8rem;
 			border-radius: 50%;
 			position: relative;
 			&:before {

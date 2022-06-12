@@ -1,28 +1,14 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-
 import { Button } from '../shared/Button';
 import { TitleSection } from './components/TitleSection';
-import { CardProject } from './components/CardProject';
-import { fromTop, stagger } from '../shared/Animations';
+import PortfolioCarrousel from './components/Carrousels/PortfolioCarrousel';
 
 export const Portfolio = ({ projects }) => {
 	return (
 		<Container id='portfolio' className='section'>
 			<TitleSection title='Portfolio' subtitle='What I have done' />
-			<motion.div
-				className='flex'
-				variants={stagger}
-				initial='hidden'
-				whileInView='show'
-				viewport={{ once: true }}
-			>
-				{projects.map(({ ...projects }) => (
-					<motion.div key={projects.title} variants={fromTop}>
-						<CardProject {...projects} />
-					</motion.div>
-				))}
-			</motion.div>
+			<PortfolioCarrousel projects={projects} />
+
 			<div className='more'>
 				<a
 					href='https://www.behance.net/joselatines'
@@ -37,13 +23,9 @@ export const Portfolio = ({ projects }) => {
 };
 
 const Container = styled.section`
-	.flex {
-		gap: 2.5rem;
-	}
 	.more {
 		position: absolute;
 		width: auto;
 		right: 5rem;
-		margin-top: 2rem;
 	}
 `;

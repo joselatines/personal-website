@@ -4,6 +4,7 @@ export const variables = {
 	colors: {
 		primary: '#6333FF',
 		secondary: '#41F37A',
+		contrast: '#e46300',
 		danger: '#f34141',
 		bg_default: '#000114',
 		gray: '#767782',
