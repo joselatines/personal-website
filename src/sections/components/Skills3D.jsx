@@ -19,7 +19,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			gridArea: 'b4',
 		},
 		{
-			name: 'Redux',
+			name: 'Typescript',
 			type: 'main',
 			priority: 3,
 			posX: 25,
@@ -32,7 +32,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			gridArea: 'c4',
 		},
 		{
-			name: 'Styled-components',
+			name: 'Redux toolkit',
 			type: 'medium',
 			gridArea: 'b3',
 			posX: 85,
@@ -49,14 +49,14 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			gridArea: 'd2',
 		},
 		{
-			name: 'Bootstrap',
+			name: 'Material UI',
 			type: 'little',
 			gridArea: 'd3',
 			posX: 85,
 			posY: 85,
 		},
 		{
-			name: 'Figma',
+			name: 'Adobe XD',
 			type: 'little',
 			priority: 3,
 			gridArea: 'c2',
