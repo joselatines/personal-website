@@ -7,7 +7,7 @@ export default function CardV2({ title, img, preview, content, type, tools }) {
 
 	return (
 		<Container>
-			<Type type={type}>Personal</Type>
+			<Type type={type}>{type}</Type>
 			<a href={preview} target='_blank' rel='noopener noreferrer'>
 				<img src={img} alt={title} />
 			</a>
