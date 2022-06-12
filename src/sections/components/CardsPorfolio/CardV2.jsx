@@ -35,7 +35,11 @@ export default function CardV2({ title, img, preview, content, type, tools }) {
 	);
 }
 
-const Container = styled.a``;
+const Container = styled.div`
+	a {
+		all: unset;
+	}
+`;
 
 const Type = styled.span`
 	font-size: 0.7em;
@@ -52,7 +56,7 @@ const Tags = styled.div`
 	display: flex;
 	gap: 0.5em;
 	margin-top: 0.5em;
-  font-size: 0.8em;
+	font-size: 0.8em;
 	flex-wrap: wrap;
 `;
 const Tag = styled(Type)`
