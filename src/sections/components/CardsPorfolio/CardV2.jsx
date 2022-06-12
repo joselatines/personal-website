@@ -16,7 +16,7 @@ export default function CardV2({ title, img, preview, content, type, tools }) {
 					{title}
 				</Title>
 				<Description>
-					{showMore ? content : `${content.substring(0, 110)}`}
+					{showMore ? content : `${content.substring(0, 115)}`}
 
 					{content.length > 110 && (
 						<span onClick={() => setShowMore(prev => !prev)}>
@@ -38,6 +38,8 @@ export default function CardV2({ title, img, preview, content, type, tools }) {
 const Container = styled.div`
 	a {
 		all: unset;
+		cursor: pointer;
+		transition: ${variables.transitions.short};
 	}
 `;
 
