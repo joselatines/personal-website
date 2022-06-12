@@ -50,7 +50,7 @@ const Type = styled.span`
 	background-color: ${({ type }) =>
 		type === 'Personal'
 			? variables.colors.primary
-			: variables.colors.secondary};
+			: '#1dd3b0'};
 	padding: 0.2em 1em;
 	border-radius: 0 0px 15px 0;
 `;

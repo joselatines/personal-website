@@ -16,6 +16,7 @@ import sushiRestaurant from './img/sushi-restaurant.png';
 import privateRouting from './img/private-routing.jpg';
 import hboCLone from './img/hbo-clone.png';
 import cloneWebsite from './img/clone-website.png';
+import nftLandingPage from './img/nft-landing-page.png';
 
 const socialMedia = [
 	{
@@ -98,6 +99,16 @@ const projects = [
 			"Landing page template created for restaurants that don't want to have a big Ecommerce and they prioritize the transactions on Instagram, WhatsApp or inside the restaurant.",
 		type: 'Personal',
 		tools: ['Typescript', 'React js', 'Landing page template'],
+	},
+	{
+		title: 'NFT Collection Landing Page',
+		img: nftLandingPage,
+		code: 'https://github.com/joselatines/nft-collection-landing-page',
+		preview: 'https://nft-collection-rude.netlify.app/',
+		content:
+			"Landing page made in react js for a client",
+		type: 'Personal',
+		tools: ['React js','Landing page'],
 	},
 	{
 		title: 'HBO Clone Website',
