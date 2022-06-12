@@ -91,7 +91,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 	.section {
 		padding:  5rem 3rem;
-		margin: 5rem 0;
+		margin: 2rem 0;
 		overflow: hidden;
 	}
 	.flex {

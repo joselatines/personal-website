@@ -176,7 +176,6 @@ const App = () => {
 			<AboutMe interests={interests} />
 			<Portfolio projects={projects} />
 			<Skills />
-			<AboutMe interests={interests} />
 			<Services services={services} />
 			<Clients clients={clients} />
 			<Contact socialMedia={socialMedia} />
