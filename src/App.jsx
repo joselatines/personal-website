@@ -107,7 +107,7 @@ const projects = [
 		preview: 'https://nft-collection-rude.netlify.app/',
 		content:
 			"Landing page made in react js for a client",
-		type: 'Personal',
+		type: 'Work',
 		tools: ['React js','Landing page'],
 	},
 	{
