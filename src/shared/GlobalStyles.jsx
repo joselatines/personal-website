@@ -90,8 +90,7 @@ export const GlobalStyles = createGlobalStyle`
         object-fit: cover;
     }
 	.section {
-		padding:  5rem 3rem;
-		margin: 2rem 0;
+		padding:  3rem;
 		overflow: hidden;
 	}
 	.flex {
