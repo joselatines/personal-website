@@ -12,6 +12,7 @@ import { EffectCoverflow, Pagination } from 'swiper';
 
 import styled from 'styled-components';
 import CardV2 from '../CardsPorfolio/CardV2';
+import { variables } from '../../../shared/GlobalStyles';
 
 export default function PortfolioCarrousel({ projects }) {
 	return (
@@ -43,9 +44,10 @@ export default function PortfolioCarrousel({ projects }) {
 }
 
 const Container = styled.div`
+margin-bottom: 20px;
 	.swiper {
 		width: 100%;
-/* 		padding-top: 50px;
+		/* 		padding-top: 50px;
 		padding-bottom: 50px; */
 	}
 
@@ -53,7 +55,10 @@ const Container = styled.div`
 		background-position: center;
 		background-size: cover;
 		width: 500px;
-/* 		width: 300px; */
+		@media screen and (max-width: ${variables.mediaQueries.mobile_xl}) {
+			width: 180px;
+		}
+		/* 		width: 300px; */
 		/* 	height: 300px; */
 	}
 
