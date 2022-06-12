@@ -64,7 +64,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			posY: 85,
 		},
 		{
-			name: 'Photoshop',
+			name: 'Next Js',
 			type: 'little',
 			priority: 4,
 			gridArea: 'c5',

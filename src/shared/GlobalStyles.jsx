@@ -78,6 +78,9 @@ export const GlobalStyles = createGlobalStyle`
 		all: unset;
 		transition: ${variables.transitions.short};
 		cursor: pointer;
+		&:hover {
+			color: ${variables.colors.secondary};
+		}
 	}
 	p{
 		font-size: clamp(1rem, .8vw, 5rem)

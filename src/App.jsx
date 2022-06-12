@@ -10,36 +10,38 @@ import { Skills } from './sections/Skills';
 import { Footer } from './shared/Footer';
 import { GlobalStyles } from './shared/GlobalStyles';
 import { Navigation } from './shared/Navigation';
-import PortfolioCarrousel from './sections/components/Carrousels/PortfolioCarrousel';
 
-import gamerEcommerce from './img/gamer-ecommerce.png';
-import cloneWebsite from './img/clone-website.png';
 import readme from './img/readme.png';
 import sushiRestaurant from './img/sushi-restaurant.png';
 import privateRouting from './img/private-routing.jpg';
 import hboCLone from './img/hbo-clone.png';
+import cloneWebsite from './img/clone-website.png';
 
 const socialMedia = [
 	{
 		name: 'Linkedin',
 		icon: <ion-icon name='logo-linkedin'></ion-icon>,
-		link: 'https://www.linkedin.com/in/jose-latines/',
+		link: 'https://www.linkedin.com/in/joselatines/',
 	},
 	{
 		name: 'Github',
 		icon: <ion-icon name='logo-github'></ion-icon>,
 		link: 'https://github.com/joselatines',
 	},
-
 	{
 		name: 'Instagram',
 		icon: <ion-icon name='logo-instagram'></ion-icon>,
 		link: 'https://www.instagram.com/gregg.33/',
 	},
 	{
+		name: 'Twitter',
+		icon: <ion-icon name='logo-twitter'></ion-icon>,
+		link: 'https://twitter.com/joselatines33',
+	},
+	{
 		name: 'Behance',
 		icon: <ion-icon name='logo-behance'></ion-icon>,
-		link: 'https://www.behance.net/joselatines?isa0=1',
+		link: 'https://www.behance.net/joselatines',
 	},
 ];
 
@@ -174,6 +176,7 @@ const App = () => {
 			<AboutMe interests={interests} />
 			<Portfolio projects={projects} />
 			<Skills />
+			<AboutMe interests={interests} />
 			<Services services={services} />
 			<Clients clients={clients} />
 			<Contact socialMedia={socialMedia} />
