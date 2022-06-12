@@ -55,7 +55,7 @@ margin-bottom: 20px;
 		background-position: center;
 		background-size: cover;
 		width: 500px;
-		@media screen and (max-width: ${variables.mediaQueries.mobile_xl}) {
+		@media screen and (max-width: ${variables.mediaQueries.mobile_l}) {
 			width: 200px;
 		}
 		/* 		width: 300px; */
