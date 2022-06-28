@@ -29,7 +29,7 @@ export const AboutMe = ({ interests }) => {
 						viewport={{ once: true }}
 					>
 						<motion.p variants={fromTop}>
-							Hi! I am Jose Latines a 19 years old <strong> Frontend Developer </strong> from 🇻🇪 specialized in technologies such as React js.
+							Hi! I am Jose Latines a <strong> Frontend Developer </strong> from 🇻🇪 specialized in technologies such as React js.
 						</motion.p>
 						<motion.p variants={fromTop}>
 						I am currently a <strong> Freelance  Developer </strong>but I am looking to work in a full time job.

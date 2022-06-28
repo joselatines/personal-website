@@ -49,7 +49,7 @@ export const Skills3D = ({ mouseX, mouseY }) => {
 			gridArea: 'd2',
 		},
 		{
-			name: 'Material UI',
+			name: 'Node Js',
 			type: 'little',
 			gridArea: 'd3',
 			posX: 85,
