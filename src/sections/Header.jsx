@@ -67,19 +67,19 @@ export const Header = () => {
 				<motion.span variants={subtitleVar}>José Gregorio Latines</motion.span>
 			</Name>
 			<Btns className='flex' variants={btnVar} initial='hidden' animate='show'>
-				<a
+				/*<a
 					href={CV}
 					target='_blank'
 					without
 					rel='noreferrer'
 					download='Frontend-Developer-Jose-Latines.pdf'
 				>
-					<Button
+					 <Button
 						icon={<ion-icon name='cloud-download-outline'></ion-icon>}
 						content='Download CV'
 						type='outline'
 					/>
-				</a>
+				</a> */
 				<HashLink smooth to='#portfolio'>
 					<Button content='Projects' />
 				</HashLink>
