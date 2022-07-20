@@ -78,6 +78,16 @@ const services = [
 		link: 'https://www.fiverr.com/share/rrVXpr',
 	},
 ];
+	/*{
+		title: 'NFT Collection Landing Page',
+		img: nftLandingPage,
+		code: 'https://github.com/joselatines/nft-collection-landing-page',
+		preview: 'https://nft-collection-rude.netlify.app/',
+		content:
+			"Landing page made in react js for a client",
+		type: 'Work',
+		tools: ['React js','Landing page'],
+	},*/
 
 const projects = [
 	{
@@ -99,16 +109,6 @@ const projects = [
 			"Landing page template created for restaurants that don't want to have a big Ecommerce and they prioritize the transactions on Instagram, WhatsApp or inside the restaurant.",
 		type: 'Work',
 		tools: ['Typescript', 'React js', 'Landing page template'],
-	},
-	{
-		title: 'NFT Collection Landing Page',
-		img: nftLandingPage,
-		code: 'https://github.com/joselatines/nft-collection-landing-page',
-		preview: 'https://nft-collection-rude.netlify.app/',
-		content:
-			"Landing page made in react js for a client",
-		type: 'Work',
-		tools: ['React js','Landing page'],
 	},
 	{
 		title: 'HBO Clone Website',
